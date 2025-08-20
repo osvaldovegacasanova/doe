@@ -10,22 +10,22 @@ export const myBio = `Aceleramos el crecimiento de tu negocio con estrategias pa
 // about me text for about section
 
 export const aboutMe =
-  'Más de 15 años evolucionando en marketing y decisiones basadas en datos nos permiten generar estrategicas robustas y con sentido para cumplir los objetivos de tu negocio.';
+  'Cada negocio tiene sus propias complejidades y desafíos. Más de 15 años evolucionando en marketing y decisiones basadas en datos nos permiten generar estrategias robustas y con sentido para cumplir los objetivos de tu negocio.';
 
 // A sub text for writing/blog section
-export const writingText = `Permanentemente hay cambios y nuevas herramientas tecnológicas. Descubre novedades en nuestro blog.`;
+export const writingText = `Permanentemente hay cambios y nuevas herramientas tecnológicas pero creemos que los objetivos de tu negocio estan primero. Nos enfocamos en entender tus particularidades para proponer soluciones son sentido, con retornos medibles, sustentables y sostenibles.`;
 
 // A sub text for contact section
 
-export const contactText = `Cada día disfrutamos la naturaleza multidisciplinaria del marketing , desde la experiencia humana hasta las herramientas tecnológicas.`;
+export const contactText = `Buscamos relaciones de confianza y largo plazo con nuestros clientes y partners. Cada día disfrutamos la naturaleza multidisciplinaria del marketing , desde la experiencia humana hasta los recursos tecnológicos que nos habilitan para el objetivo.`;
 
 // Links to put in the navigation bar as well as footer at bottom of the page
 
 export const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'Nosotros', href: '/#about' },
-  { name: 'Blog', href: '/#blog' },
-  { name: 'Contacto', href: '/#contact' },
+  { name: 'Artículos', href: '/#blog' },
+  { name: 'contacto@pixory.cl', href: 'mailto:contacto@pixory.cl' },
 ];
 
 // Selected projects (side box) for main section of page
@@ -51,6 +51,8 @@ export const skills = [
   'Hotjar',
   'Astrojs',
   'Wordpress',
+  'CRO',
+  'Lead Generation'
 ];
 
 // work experience box for about section of the page
@@ -58,13 +60,13 @@ export const skills = [
 export const workExperiences = [
   {
     organisationName: 'SEO',
-    position: 'Posicionamiento',
+    position: 'Posicionamiento Online',
     date: '-- | --',
     info: ['Auditoría SEO', 'Contenidos Optimizados'],
   },
   {
-    organisationName: 'Google Ads',
-    position: 'Publicidad Pagada',
+    organisationName: 'Publicidad Digital',
+    position: 'Google Ads',
     date: '-- | --',
     info: ['Campañas Search', 'Campañas Performance'],
   },
@@ -74,11 +76,13 @@ export const workExperiences = [
     date: '-- | --',
     info: ['Agentes para captación de leads','Agentes para optimización backoffice'],
   },
+
 ];
 
 // contact box for contact section of the page
 
 export const contactOptions = [
+  { name: 'contacto@pixory.cl', link: 'mailto:contacto@pixory.cl' },
   { name: 'Linktree', link: 'https://linktr.ee/pixorymarketing' },
   { name: 'Instagram', link: 'https://instagram.com/pixorychile' },
   { name: 'LinkedIN', link: 'https://www.linkedin.com/company/pixory-marketing-chile/' },

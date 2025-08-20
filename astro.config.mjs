@@ -8,6 +8,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://aether-astro-theme.netlify.app/',
+  site: 'https://www.pixory.cl/',
   integrations: [tailwind(), react(), sitemap()],
 });
