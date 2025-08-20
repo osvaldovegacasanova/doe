@@ -1,89 +1,88 @@
 export const isTransitionEnabled = true; // for enabling view transitions
 
-export const myName = 'John Doe'; // For name in main intro text
+export const myName = 'Marketing para Humanos'; // For name in main intro text
 
-export const navLogoText = 'John Doe'; // navbar left-most logo text
+export const navLogoText = 'Pixory'; // navbar left-most logo text
 // bio for main section
 
-export const myBio = `A passionate web developer with a knack for creating dynamic and responsive web applications. With a background in computer science and a love for coding, I thrive on turning ideas into reality through technology.`;
+export const myBio = `Aceleramos el crecimiento de tu negocio con estrategias para impulsar la venta, con experiencia, herramientas de marketing digital y optimización con IA.`;
 
 // about me text for about section
 
 export const aboutMe =
-  'I specialize in front-end development with a focus on creating user-friendly interfaces. My skills include HTML, CSS, JavaScript, and frameworks like React and Vue.js. I also have experience in back-end development using Node.js and Express, making me a versatile full-stack developer.';
+  'Más de 15 años evolucionando en marketing y decisiones basadas en datos nos permiten generar estrategicas robustas y con sentido para cumplir los objetivos de tu negocio.';
 
 // A sub text for writing/blog section
-export const writingText = `I typically keep my words few, but when I do pen them, it’s a glimpse into my passions and my adventure through the digital landscape.`;
+export const writingText = `Permanentemente hay cambios y nuevas herramientas tecnológicas. Descubre novedades en nuestro blog.`;
 
 // A sub text for contact section
 
-export const contactText = `I’d love to hear from you! Whether you have questions, collaboration ideas, or just want to connect, feel free to reach out. I’m always open to engaging conversations and exploring new opportunities.`;
+export const contactText = `Cada día disfrutamos la naturaleza multidisciplinaria del marketing , desde la experiencia humana hasta las herramientas tecnológicas.`;
 
 // Links to put in the navigation bar as well as footer at bottom of the page
 
 export const navLinks = [
   { name: 'Home', href: '/' },
-  { name: 'About', href: '/#about' },
+  { name: 'Nosotros', href: '/#about' },
   { name: 'Blog', href: '/#blog' },
-  { name: 'Contact', href: '/#contact' },
+  { name: 'Contacto', href: '/#contact' },
 ];
 
 // Selected projects (side box) for main section of page
 
 export const selectedProjects = [
-  { name: 'Project 1', link: '#' },
-  { name: 'Project 2', link: '#' },
-  { name: 'Project 3', link: '#' },
-  { name: 'Project 4', link: '#' },
+  { name: 'Campañas Digitales', link: '#' },
+  { name: 'Posicionamiento Orgánico SEO', link: '#' },
+  { name: 'Automatizaciones IA', link: '#' },
+  { name: 'Estrategia', link: '#' },
 ];
 
 // Skills section for about section of the page
 
 export const skills = [
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'React',
-  'Express',
-  'Nodejs',
-  'MongoDB',
-  'Git',
-  'GitHub',
+  'Google Ads',
+  'SEO',
+  'N8N',
+  'Data Science',
+  'Power Bi',
+  'GA4',
+  'Looker Studio',
+  'SemRush',
+  'Hotjar',
   'Astrojs',
-  'TailwindCSS',
+  'Wordpress',
 ];
 
 // work experience box for about section of the page
 
 export const workExperiences = [
   {
-    organisationName: 'company 1',
-    position: 'Intern',
-    date: '2022 - 2023',
-    info: ['I worked on this', 'I showed this skills'],
+    organisationName: 'SEO',
+    position: 'Posicionamiento',
+    date: '-- | --',
+    info: ['Auditoría SEO', 'Contenidos Optimizados'],
   },
   {
-    organisationName: 'company 2',
-    position: 'UI/UX Designer',
-    date: '2024 - present',
-    info: ['I worked on this', 'I showed this skills'],
+    organisationName: 'Google Ads',
+    position: 'Publicidad Pagada',
+    date: '-- | --',
+    info: ['Campañas Search', 'Campañas Performance'],
   },
   {
-    organisationName: 'company 3',
-    position: 'React Developer',
-    date: '2022 - 2023',
-    info: ['I worked on this', 'I showed this skills'],
+    organisationName: 'Automatizaciones IA',
+    position: 'Proyectos a la medida',
+    date: '-- | --',
+    info: ['Agentes para captación de leads','Agentes para optimización backoffice'],
   },
 ];
 
 // contact box for contact section of the page
 
 export const contactOptions = [
-  { name: 'Github', link: 'https://github.com' },
-  { name: 'Instagram', link: 'https://instagram.com' },
-  { name: 'LinkedIN', link: 'https://linkedin.com' },
-  { name: 'X', link: 'https://x.com' },
+  { name: 'Linktree', link: 'https://linktr.ee/pixorymarketing' },
+  { name: 'Instagram', link: 'https://instagram.com/pixorychile' },
+  { name: 'LinkedIN', link: 'https://www.linkedin.com/company/pixory-marketing-chile/' },
 ];
 
 // for enabling/disabling maintained by text in footer, if you want.
-export const showDeveloperText = true;
+export const showDeveloperText = false;
