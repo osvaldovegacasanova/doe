@@ -5,7 +5,7 @@ export const myName = 'Marketing para Humanos'; // For name in main intro text
 export const navLogoText = 'Pixory'; // navbar left-most logo text
 // bio for main section
 
-export const myBio = `Aceleramos el crecimiento de tu negocio con estrategias para impulsar la venta, con experiencia, herramientas de marketing digital y optimización con IA.`;
+export const myBio = `Ayudamos a empresas y emprendedores a acelerar su crecimiento con experiencia, estrategias de marketing digital y optimizaciones con Inteligencia Artificial.`;
 
 // about me text for about section
 
