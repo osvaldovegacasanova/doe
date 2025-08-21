@@ -25,7 +25,7 @@ export default function Navbar({ navLinks }) {
     <nav className='relative top-0 left-0 w-full'>
       <div className='flex justify-between items-center p-5'>
         <a href='/' className='logo text-md font-bold'>
-          {navLogoText ? navLogoText : 'Pixory.'}
+          {navLogoText ? navLogoText : 'Pixory'}
         </a>
         <div className='links'>
           <ul className='hidden md:flex items-center gap-3'>

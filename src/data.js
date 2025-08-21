@@ -10,7 +10,7 @@ export const myBio = `Ayudamos a empresas y emprendedores a acelerar su crecimie
 // about me text for about section
 
 export const aboutMe =
-  'Cada negocio tiene sus propias complejidades y desafíos. Más de 15 años evolucionando en marketing y decisiones basadas en datos nos permiten generar estrategias robustas y con sentido para cumplir los objetivos de tu negocio.';
+  'Cada negocio tiene sus propias complejidades y desafíos. Más de 15 años evolucionando en marketing y decisiones basadas en datos nos permiten generar estrategias robustas y con sentido para cumplir los objetivos de tu organización, negocio o emprendimiento.';
 
 // A sub text for writing/blog section
 export const writingText = `Permanentemente hay cambios y nuevas herramientas tecnológicas pero creemos que los objetivos de tu negocio estan primero. Nos enfocamos en entender tus particularidades para proponer soluciones son sentido, con retornos medibles, sustentables y sostenibles.`;
