@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "e004052571e6daec",
+        "id": "6964e02f6c4dfded",
         "type": "tabs",
         "children": [
           {
-            "id": "633c21e4af489e41",
+            "id": "d6a3e6b0379e5d85",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "post1.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "post1"
+              "title": "New tab"
             }
           }
         ]
@@ -40,7 +36,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical",
+                "sortOrder": "byModifiedTime",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -96,7 +92,7 @@
               "state": {
                 "collapseAll": false,
                 "extraContext": false,
-                "sortOrder": "alphabetical",
+                "sortOrder": "byModifiedTime",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
@@ -166,15 +162,17 @@
       "bases:Create new base": false
     }
   },
-  "active": "cf5f783d938593b6",
+  "active": "d6a3e6b0379e5d85",
   "lastOpenFiles": [
-    "post1.md",
-    "Untitled.canvas",
+    "core-update-google.md",
+    "cloudflare-bloquea-IA.md",
+    "Untitled",
     "post3.md",
-    "post2.md",
+    "odoo-inteligencia-artificial.md",
+    "2025-08-26.md",
+    "Untitled.canvas",
     "2025-08-20.md",
     "Untitled.base",
-    "post4.md",
     "Untitled 1.canvas"
   ]
 }
