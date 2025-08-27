@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/BlogLayout.astro
-title: Odoo | Optimización con IA
+title: Odoo | Optimización con Inteligencia Artificial
 description: Puedes atender las consultas de tus clientes con IA y crear automáticamente los leads en tu CRM
 pubDate: Agosto 2025
 heroImage:
