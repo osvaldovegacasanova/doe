@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "costos-inteligencia-artificial.md",
+                "file": "core-update-google.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "costos-inteligencia-artificial"
+              "title": "core-update-google"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "costos-inteligencia-artificial.md",
+                "file": "core-update-google.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "byModifiedTime",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for costos-inteligencia-artificial"
+              "title": "Backlinks for core-update-google"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "costos-inteligencia-artificial.md",
+                "file": "core-update-google.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from costos-inteligencia-artificial"
+              "title": "Outgoing links from core-update-google"
             }
           },
           {
@@ -183,11 +183,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "fb022a5df9d6fd31",
+  "active": "d6a3e6b0379e5d85",
   "lastOpenFiles": [
+    "costos-inteligencia-artificial.md",
     "odoo-inteligencia-artificial.md",
     "cloudflare-bloquea-IA.md",
-    "costos-inteligencia-artificial.md",
     "core-update-google.md",
     "Untitled",
     "post3.md",
