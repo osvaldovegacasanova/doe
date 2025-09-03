@@ -16,7 +16,7 @@ tags:
 
 En el centro de muchas aplicaciones modernas de procesamiento de lenguaje natural- desde motores de búsqueda hasta asistentes de voz y agentes RAG - se encuentra una tarea crucial: representar palabras como números. Mas específicamente, convertirlas en vectores de alta dimensión que capturen su significado. Uno de los enfoques mas influyentes para lograr esto es Word2Vec, una arquitectura de redes neuronales diseñada para procesar embeddings de palabras.
 
-# ¿Que son los embeddings?
+## ¿Que son los embeddings?
 
 Las redes neuronales de las IA necesitan entradas numéricas, pero las palabras no son números. Para resolver esto, comenzamos usando codificaciones one-hot, donde cada palabra del vocabulario se representa como un vector con todos ceros excepto un uno en la posición correspondiente. Sin embargo, esta representación es ineficiente y no capta relaciones semánticas.
 
@@ -71,7 +71,7 @@ Este enfoque básico no fue diseñado para eficiencia, por lo que consume bastan
 ### Usos de los embeddings.
 
 Cuando creamos un Agente potenciado con Inteligencia Artificial que necesita "comprender" información de tu negocio por ejemplo para responder preguntas de tus potenciales clientes y dependiendo de la complejidad de información puede ser ideal transformarla en un formato vectorial. 
-No podemos olvidar que complejidad de un sistema y el uso intensivo de IA tiene impacto en los costos, de manera que es fundamental diseñar una solución a la medida de las necesidades y capacidades de tu negocio.
+No podemos olvidar que complejidad de un sistema y el uso intensivo de IA tiene impacto en los [[costos-inteligencia-artificial]], de manera que es fundamental diseñar una solución a la medida de las necesidades y capacidades de tu negocio.
 Esta tecnología mejora radicalmente la experiencia de comunicación y acceso a información confiable de tus potenciales clientes y aumenta las probabilidades continuar hacia una acción de conversión.
 
 Si necesitas potenciar tu negocio con Inteligencia Artificial, escríbenos a contacto@pixory.cl
