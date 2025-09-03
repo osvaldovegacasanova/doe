@@ -8,10 +8,9 @@ badge: Demo badge
 author: Os
 tags:
   - RAG
-  - Embeddings
   - InteligenciaArtificial
   - IA
-  - Chatbot
+  - Agente
 ---
 
 En un mundo donde la eficiencia marca la diferencia entre crecer o estancarse, muchas empresas están dando el paso hacia la automatización inteligente. Implementar un Agente de IA (Inteligencia Artificial) ya no es una aspiración futurista: es una ventaja competitiva real, tangible y accesible. 

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "que-son-los-embeddings.md",
+                "file": "como-implementar-agentes-ia.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "que-son-los-embeddings"
+              "title": "como-implementar-agentes-ia"
             }
           }
         ]
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "que-son-los-embeddings.md",
+                "file": "como-implementar-agentes-ia.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from que-son-los-embeddings"
+              "title": "Outgoing links from como-implementar-agentes-ia"
             }
           },
           {
@@ -185,8 +185,8 @@
   },
   "active": "d6a3e6b0379e5d85",
   "lastOpenFiles": [
-    "como-implementar-agentes-ia.md",
     "que-son-los-embeddings.md",
+    "como-implementar-agentes-ia.md",
     "costos-inteligencia-artificial.md",
     "core-update-google.md",
     "odoo-inteligencia-artificial.md",
