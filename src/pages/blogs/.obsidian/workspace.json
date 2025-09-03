@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "costos-inteligencia-artificial.md",
+                "file": "que-son-los-embeddings.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "costos-inteligencia-artificial"
+              "title": "que-son-los-embeddings"
             }
           }
         ]
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "costos-inteligencia-artificial.md",
+                "file": "que-son-los-embeddings.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from costos-inteligencia-artificial"
+              "title": "Outgoing links from que-son-los-embeddings"
             }
           },
           {
@@ -185,8 +185,8 @@
   },
   "active": "d6a3e6b0379e5d85",
   "lastOpenFiles": [
-    "que-son-los-embeddings.md",
     "costos-inteligencia-artificial.md",
+    "que-son-los-embeddings.md",
     "core-update-google.md",
     "odoo-inteligencia-artificial.md",
     "cloudflare-bloquea-IA.md",
