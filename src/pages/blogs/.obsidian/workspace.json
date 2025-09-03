@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "core-update-google.md",
+                "file": "costos-inteligencia-artificial.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "core-update-google"
+              "title": "costos-inteligencia-artificial"
             }
           }
         ]
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "core-update-google.md",
+                "file": "costos-inteligencia-artificial.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from core-update-google"
+              "title": "Outgoing links from costos-inteligencia-artificial"
             }
           },
           {
@@ -185,10 +185,11 @@
   },
   "active": "d6a3e6b0379e5d85",
   "lastOpenFiles": [
+    "que-son-los-embeddings.md",
+    "core-update-google.md",
     "costos-inteligencia-artificial.md",
     "odoo-inteligencia-artificial.md",
     "cloudflare-bloquea-IA.md",
-    "core-update-google.md",
     "Untitled",
     "post3.md",
     "2025-08-26.md",
