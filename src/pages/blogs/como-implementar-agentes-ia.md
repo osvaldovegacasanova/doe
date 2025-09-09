@@ -1,10 +1,10 @@
 ---
-layout: ../../layouts/BlogLayout.astro
+layout: ../../layouts/BlogLayout3.astro
 title: ¿Cómo implementar un Agente de Inteligencia Artificial en tu empresa?
 description: "En un mundo donde la eficiencia marca la diferencia entre crecer o estancarse, muchas empresas están dando el paso hacia la automatización inteligente. Implementar un Agente de IA ya no es una aspiración futurista: es una ventaja competitiva real, tangible y accesible."
 pubDate: Septiembre 2025
 heroImage: /IAagent_.webp
-badge: Demo badge
+badge: Inteligencia Artificial
 author: Os
 tags:
   - RAG
@@ -13,7 +13,7 @@ tags:
   - Agente
 ---
 
-En un mundo donde la eficiencia marca la diferencia entre crecer o estancarse, muchas empresas están dando el paso hacia la automatización inteligente. Implementar un Agente de IA (Inteligencia Artificial) ya no es una aspiración futurista: es una ventaja competitiva real, tangible y accesible. 
+En un mundo donde la eficiencia marca la diferencia entre crecer o estancarse, muchas empresas están dando el paso hacia la automatización inteligente. Implementar un Agente de IA Inteligencia Artificial) ya no es una aspiración futurista: es una ventaja competitiva real, tangible y accesible. 
 
 **Detecta los cuellos de botella primero, no después**. Antes de pensar en algoritmos o asistentesnvirtuales, es fundamental levantar los procesos actuales. Esto significa observar con lupa dónde se pierden horas valiosas, cuáles tareas se repiten constantemente y en qué puntos el equipo humano está sobrecargado sin generar más valor. 
 

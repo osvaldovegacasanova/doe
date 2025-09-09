@@ -1,0 +1,47 @@
+---
+import { Image } from 'astro:assets';
+import Footer from '../components/Footer.astro';
+import Navbar from '../components/Navbar';
+import { navLinks } from '../data';
+const { frontmatter, heroImage } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{frontmatter.title}</title>
+    <meta name="description" content={frontmatter.description} />
+  </head>
+  <body class="bg-white text-black">
+    <Navbar navLinks={navLinks} client:load />
+
+    <main class="max-w-3xl mx-auto px-4 md:px-8 py-10 blog">
+      <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight text-center">
+        {frontmatter.title}
+      </h1>
+      <p class="text-sm text-center text-gray-500 mb-6">
+        Published on {frontmatter.pubDate} by {frontmatter.author}
+      </p>
+
+      {
+        heroImage && (
+          <div class="w-full max-w-xl mx-auto mb-8">
+            <Image
+              src={heroImage}
+              alt={frontmatter.title}
+              width={600}
+              height={400}
+              class="rounded-lg w-full h-auto"
+            />
+          </div>
+        )
+      }
+
+      <article class="prose prose-neutral lg:prose-lg max-w-none">
+        <slot />
+      </article>
+    </main>
+
+    <Footer navLinks={navLinks} />
+  </body>
+</html>

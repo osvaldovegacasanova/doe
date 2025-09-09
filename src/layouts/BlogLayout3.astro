@@ -1,0 +1,90 @@
+---
+import Footer from '../components/Footer.astro';
+import { navLinks } from '../data';
+
+const { frontmatter } = Astro.props;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{frontmatter.title}</title>
+    <meta name="description" content={frontmatter.description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ✅ Social / SEO -->
+    <meta property="og:title" content={frontmatter.title} />
+    <meta property="og:description" content={frontmatter.description} />
+    {frontmatter.heroImage && (
+      <meta property="og:image" content={frontmatter.heroImage} />
+    )}
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+
+  <body class="bg-white text-black font-sans">
+    <main class="max-w-3xl mx-auto px-4 md:px-8 py-12">
+      <!-- Title -->
+      <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight text-center">
+        {frontmatter.title}
+      </h1>
+
+      <!-- Optional badge -->
+      {frontmatter.badge && (
+        <p class="text-center text-xs inline-block bg-gray-100 text-gray-700 px-3 py-1 rounded-full mb-2">
+          {frontmatter.badge}
+        </p>
+      )}
+
+      <!-- Date + author -->
+      <p class="text-sm text-center text-gray-500 mb-6">
+        Publicado en {frontmatter.pubDate} por {frontmatter.author}
+      </p>
+
+      <!-- Hero image -->
+      {frontmatter.heroImage && (
+        <div class="w-full max-w-3xl mx-auto aspect-[3/2] mb-8">
+          <img
+            src={frontmatter.heroImage}
+            alt={frontmatter.title}
+            class="rounded-lg object-cover w-full h-full"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      )}
+
+      <!-- Main content -->
+      <article class="prose prose-neutral lg:prose-lg max-w-none [&>p]:mb-5">
+        <slot />
+      </article>
+
+      <!-- Tags -->
+      {frontmatter.tags && frontmatter.tags.length > 0 && (
+        <div class="mt-8 text-center">
+          <p class="text-sm text-gray-500 mb-2">Etiquetas:</p>
+          <ul class="flex flex-wrap justify-center gap-2 text-sm">
+            {frontmatter.tags.map((tag) => (
+              <li class="bg-gray-200 text-gray-800 px-2 py-1 rounded-full">
+                #{tag}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      <!-- Divider -->
+      <hr class="my-10 border-gray-200" />
+
+      <!-- Author info -->
+      <div class="text-center text-sm text-gray-500">
+        Artículo por {frontmatter.author} • 
+        <a href="mailto:contacto@pixory.cl" class="underline hover:text-blue-600 transition">
+          contacto@pixory.cl
+        </a>
+      </div>
+    </main>
+
+    <Footer navLinks={navLinks} />
+  </body>
+</html>
