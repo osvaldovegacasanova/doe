@@ -54,10 +54,9 @@ const { frontmatter } = Astro.props;
         </div>
       )}
 
-      <!-- Main blog content -->
-      <article class="prose prose-neutral lg:prose-lg max-w-none [&>p]:mb-5">
+        <article class="prose prose-neutral lg:prose-lg max-w-none [&>ul]:pl-6 [&>li]:mb-1.5">
         <slot />
-      </article>
+        </article>
 
       <!-- Optional tags -->
       {frontmatter.tags && frontmatter.tags.length > 0 && (
