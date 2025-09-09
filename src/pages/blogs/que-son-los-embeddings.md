@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/BlogLayout.astro
+layout: ../../layouts/BlogLayout4.astro
 title: ¿Qué son los embeddings en el contexto de la Inteligencia Artificial?
 description: Cuando creamos un Agente IA para tu negocio con frecuencia transformamos tu base de conocimiento en embeddings para alimentar a la Inteligencia Artificial. Pero, ¿Qué es un embedding?
 pubDate: Septiembre 2025

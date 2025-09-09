@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/BlogLayout.astro
+layout: ../../layouts/BlogLayout4.astro
 title: "El Core Update de Google (Junio 2025): Primeras observaciones, Ganadores, Perdedores | Pixory"
 description: El Google Core Update ya está generando impactos en el ecosistema digital.
 pubDate: Junio 2025

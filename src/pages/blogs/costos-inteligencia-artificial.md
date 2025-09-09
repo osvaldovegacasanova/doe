@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/BlogLayout.astro
+layout: ../../layouts/BlogLayout4.astro
 title: Inteligencia Artificial | Costos que debes considerar.
 description: Estimar los costos de la Inteligencia Artificial es de máxima importancia para proyectar en ROI en un proceso de optimización.
 pubDate: Agosto 2025
