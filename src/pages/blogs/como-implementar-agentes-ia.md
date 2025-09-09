@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/BlogLayout3.astro
+layout: ../../layouts/BlogLayout4.astro
 title: ¿Cómo implementar un Agente de Inteligencia Artificial en tu empresa?
 description: "En un mundo donde la eficiencia marca la diferencia entre crecer o estancarse, muchas empresas están dando el paso hacia la automatización inteligente. Implementar un Agente de IA ya no es una aspiración futurista: es una ventaja competitiva real, tangible y accesible."
 pubDate: Septiembre 2025

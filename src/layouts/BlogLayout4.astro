@@ -12,7 +12,7 @@ const { frontmatter } = Astro.props;
     <meta name="description" content={frontmatter.description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ✅ Social / SEO -->
+    <!-- ✅ SEO / Social -->
     <meta property="og:title" content={frontmatter.title} />
     <meta property="og:description" content={frontmatter.description} />
     {frontmatter.heroImage && (
@@ -41,21 +41,25 @@ const { frontmatter } = Astro.props;
         Publicado en {frontmatter.pubDate} por {frontmatter.author}
       </p>
 
-        <img
-        src={frontmatter.heroImage}
-        alt={frontmatter.title}
-        class="rounded-lg object-cover w-full h-full"
-        loading="lazy"
-        decoding="async"
-        />
+      <!-- Hero image (safe with string paths from frontmatter) -->
+      {frontmatter.heroImage && (
+        <div class="w-full max-w-3xl mx-auto aspect-[3/2] mb-8">
+          <img
+            src={frontmatter.heroImage}
+            alt={frontmatter.title}
+            class="rounded-lg object-cover w-full h-full"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      )}
 
-
-      <!-- Main content -->
+      <!-- Main blog content -->
       <article class="prose prose-neutral lg:prose-lg max-w-none [&>p]:mb-5">
         <slot />
       </article>
 
-      <!-- Tags -->
+      <!-- Optional tags -->
       {frontmatter.tags && frontmatter.tags.length > 0 && (
         <div class="mt-8 text-center">
           <p class="text-sm text-gray-500 mb-2">Etiquetas:</p>
