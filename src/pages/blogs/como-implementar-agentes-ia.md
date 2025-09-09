@@ -31,7 +31,7 @@ Cada solución debe estar alineada con un KPI claro, no con la moda del momento.
 **Diseña soluciones personalizadas, no genéricas**. Una vez identificadas las oportunidades, es hora de diseñar el agente con un enfoque a medida. Esto implica:
 
 - Elegir las tecnologías adecuadas.
-- Diseñar flujos conversacionales si es un agente de contacto Integrarlo con tus sistemas actuales 
+- Diseñar flujos conversacionales si es un agente de contacto Integrarlo con tus sistemas actuales.
 - Definir roles: ¿la IA apoya, ejecuta o decide? 
 
 En Pixory creemos en agentes híbridos: automatizan sin desconectarse del valor humano del negocio. 
