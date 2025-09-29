@@ -1,0 +1,13 @@
+---
+const { phone = '56956460570', message = 'Hola, necesito más información' } = Astro.props;
+const link = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+---
+<a
+  href={`https://wa.me/${phone}?text=${encodeURIComponent(message)}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="fixed bottom-4 right-4 flex items-center justify-center p-3 rounded-full bg-green-500 shadow-lg hover:bg-green-600"
+>
+  <img src="/icons8-whatsapp-50.png" alt="WhatsApp" class="h-6 w-6" />
+</a>
+
