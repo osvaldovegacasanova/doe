@@ -5,12 +5,12 @@ export const myName = 'Marketing para Humanos'; // For name in main intro text
 export const navLogoText = 'Pixory'; // navbar left-most logo text
 // bio for main section
 
-export const myBio = `Ayudamos a empresas y emprendedores a acelerar su crecimiento con experiencia, estrategias de marketing digital y optimizaciones con Inteligencia Artificial.`;
+export const myBio = `Una Agencia de Marketing que expande tu equipo para acelerar el crecimiento y potenciar tu marca.`;
 
 // about me text for about section
 
 export const aboutMe =
-  'Cada negocio tiene sus propias complejidades y desafíos. Más de 15 años evolucionando en marketing y decisiones basadas en datos nos permiten generar estrategias robustas y con sentido para cumplir los objetivos de tu organización, negocio o emprendimiento.';
+  'Cada marca tiene sus propias complejidades y desafíos. Más de 15 años evolucionando en marketing y decisiones basadas en datos nos permiten generar estrategias robustas y con sentido para cumplir los objetivos de tu organización, negocio o emprendimiento.';
 
 // A sub text for writing/blog section
 export const writingText = `Permanentemente hay cambios y nuevas herramientas tecnológicas pero creemos que los objetivos de tu negocio estan primero. Nos enfocamos en entender tus particularidades para proponer soluciones son sentido, con retornos medibles, sustentables y sostenibles.`;

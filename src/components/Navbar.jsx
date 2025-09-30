@@ -24,8 +24,8 @@ export default function Navbar({ navLinks }) {
   return (
     <nav className='relative top-0 left-0 w-full'>
       <div className='flex justify-between items-center p-5'>
-        <a href='/' className='logo text-md font-bold'>
-          {navLogoText ? navLogoText : 'Pixory'}
+        <a href='/' className='logo flex items-center'>
+          <img src='/Pixorylogo3.svg' alt={navLogoText} className="h-[60px] w-auto" />
         </a>
         <div className='links'>
           <ul className='hidden md:flex items-center gap-3'>
