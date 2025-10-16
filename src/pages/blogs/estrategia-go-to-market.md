@@ -10,6 +10,7 @@ tags:
   - Marketing
   - gtm
   - go-to-market
+cssclasses:
 ---
 
 ## ¿Qué es la estrategia Go to Market?
@@ -46,21 +47,25 @@ Una estrategia GTM bien estructurada aporta beneficios clave:
 5. Pricing: Sugerimos estrategias de precios flexibles y evolutivas que reflejan el valor de marca y se ajustan al mercado y expectativas del consumidor.
 6. Marketing: Cada campaña debe construir una conexión duradera con el público objetivo. Implementamos métricas de seguimiento que aseguran su efectividad y ajuste continuo.
 
-## Metodología para comenzar una estrategia Go to Market: Etapas Clave.
+## Metodología Pixory para abordar una estrategia Go to Market:
 
-1. *Análisis y marco metodológico*
-- Alineamiento: ¿Por qué lanzamos este producto o servicio?
-- Propósito: ¿Qué queremos lograr?
-- Aspiración: ¿Cómo definimos el éxito en el mercado? A partir de esto, se alinea el plan estratégico con los objetivos y visión de la empresa.
-2. *Definición y Premisas*
-* En donde actuar: Segmentos o nichos donde competir.
-* Como ganar: Diferenciación frente a la competencia.
-* Análisis FODA y tendencias.
+Primero analizamos tu empresa y su identidad y construimos una mapa de aspiraciones y metas.
+
+* Alineamiento: ¿Por qué lanzamos este producto o servicio? | identificamos el propósito principal en el mercado y en la empresa.
+- Propósito: ¿Qué queremos lograr? | definir objetivos especificos.
+- Aspiración: ¿Cómo alcanzamos el objetivos y resultados deseados del producto o servicio.
+El alineamiento entre el plan estratégico y el propósito de la compañía es crítico para asegurar que cada acción contribuya a la visión global y a los objetivos de largo plazo.
+
+2. *Definición , Premisas* : Se establecen las premisas que guían la implementación de la estrategia go-to-market. Para hacerlo tomamos en cuenta elementos como:
+* En donde actuar: Segmentos o nichos donde se enfocará la estrategia.
+* Como ganar: Determinar como lo que ofrecemos nos diferenciará en el mercado.
+* Debilidades y Fortalezas: tomar nota de las fortalezas, debilidades y tendencias asociadas a los productos o servicios, innovación, formas de aproximarse al mercado, etc.
 * "Jobs to be done" / Beneficios / Dolores.
 * Propuesta de valor alineada.
 * Premisas de diferenciación.
 * Votación y compromiso del equipo directivo.
-1. *Implementación y Roadmap*
+
+3. *Implementación y Roadmap*
 * Alineación del modelo de negocio : Cada función del negocio debe contribuir a los objetivos GTM.
 * Desarrollo de capacidades: Desde herramientas tecnológicas hasta competencias clave como data analytics, marketing digital o experiencia de cliente.
 * Establecimiento de objetivos estratégicos: Definidos bajo criterios SMART y alineados al propósito general.

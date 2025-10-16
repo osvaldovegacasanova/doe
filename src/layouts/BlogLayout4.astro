@@ -3,18 +3,21 @@ import Footer from '../components/Footer.astro';
 import { navLinks } from '../data';
 
 const { frontmatter } = Astro.props;
+const seoTitle = frontmatter.seoTitle ?? frontmatter.title;
+const seoDescription = frontmatter.seoDescription ?? frontmatter.description ?? '';
+const pageTitle = frontmatter.displayTitle ?? frontmatter.title;
 ---
 
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>{frontmatter.title}</title>
-    <meta name="description" content={frontmatter.description} />
+    <title>{seoTitle}</title>
+    <meta name="description" content={seoDescription} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ✅ SEO / Social -->
-    <meta property="og:title" content={frontmatter.title} />
-    <meta property="og:description" content={frontmatter.description} />
+    <!-- ?o. SEO / Social -->
+    <meta property="og:title" content={seoTitle} />
+    <meta property="og:description" content={seoDescription} />
     {frontmatter.heroImage && (
       <meta property="og:image" content={frontmatter.heroImage} />
     )}
@@ -26,7 +29,7 @@ const { frontmatter } = Astro.props;
     <main class="max-w-3xl mx-auto px-4 md:px-8 py-12">
       <!-- Title -->
       <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight text-center">
-        {frontmatter.title}
+        {pageTitle}
       </h1>
 
       <!-- Optional badge -->
@@ -46,7 +49,7 @@ const { frontmatter } = Astro.props;
         <div class="w-full max-w-3xl mx-auto aspect-[3/2] mb-8">
           <img
             src={frontmatter.heroImage}
-            alt={frontmatter.title}
+            alt={pageTitle}
             class="rounded-lg object-cover w-full h-full"
             loading="lazy"
             decoding="async"
@@ -84,7 +87,7 @@ const { frontmatter } = Astro.props;
 
       <!-- Author info -->
       <div class="text-center text-sm text-gray-500">
-        Artículo por {frontmatter.author} • 
+        Art??culo por {frontmatter.author} ??? 
         <a href="mailto:contacto@pixory.cl" class="underline hover:text-blue-600 transition">
           contacto@pixory.cl
         </a>
