@@ -19,6 +19,7 @@ import BlogSection from '../components/sections/BlogSection.astro';
 import Footer from '../components/Footer.astro';
 import ContactSection from '../components/sections/ContactSection.astro';
 import LogoSlider from '../components/LogoSlider';
+import ScrollReveal from '../components/ScrollReveal';
 ---
 
 <MainLayout>
@@ -28,15 +29,23 @@ import LogoSlider from '../components/LogoSlider';
     myBio={myBio}
     selectedProjects={selectedProjects}
   />
-  <section class="w-full bg-slate-50 border-y border-slate-200">
-    <LogoSlider logos={clientLogos} client:load />
-  </section>
-  <AboutSection
-    aboutMe={aboutMe}
-    skills={skills}
-    workExperiences={workExperiences}
-  />
-  <BlogSection writingText={writingText} />
-  <ContactSection contactText={contactText} contactOptions={contactOptions} />
+  <ScrollReveal client:load>
+    <section class="w-full bg-slate-50 border-y border-slate-200">
+      <LogoSlider logos={clientLogos} client:load />
+    </section>
+  </ScrollReveal>
+  <ScrollReveal client:load delay={0.2}>
+    <AboutSection
+      aboutMe={aboutMe}
+      skills={skills}
+      workExperiences={workExperiences}
+    />
+  </ScrollReveal>
+  <ScrollReveal client:load delay={0.2}>
+    <BlogSection writingText={writingText} />
+  </ScrollReveal>
+  <ScrollReveal client:load delay={0.2}>
+    <ContactSection contactText={contactText} contactOptions={contactOptions} />
+  </ScrollReveal>
   <Footer navLinks={navLinks} />
 </MainLayout>

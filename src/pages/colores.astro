@@ -1,0 +1,296 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer.astro';
+import { navLinks } from '../data';
+
+const backgroundColors = [
+  {
+    name: 'Base blanco',
+    token: 'bg-white',
+    textClass: 'text-black',
+    usage: 'Fondos globales en los layouts de blog y el panel movil del menu.',
+  },
+  {
+    name: 'Oscuro interfaz',
+    token: 'bg-black',
+    textClass: 'text-white',
+    usage: 'Lineas y contenedor del menu hamburguesa en el Navbar movil.',
+  },
+  {
+    name: 'Footer suave',
+    token: 'bg-gray-50',
+    textClass: 'text-slate-700',
+    usage: 'Fondo del footer en src/components/Footer.astro.',
+  },
+  {
+    name: 'Badge gris claro',
+    token: 'bg-gray-100',
+    textClass: 'text-slate-600',
+    usage: 'Badges opcionales en layouts de blog.',
+  },
+  {
+    name: 'Etiqueta gris',
+    token: 'bg-gray-200',
+    textClass: 'text-slate-600',
+    usage: 'Pildoras de etiquetas en layouts de blog.',
+  },
+  {
+    name: 'Chip habilidades',
+    token: 'bg-slate-100',
+    textClass: 'text-slate-600',
+    usage: 'Fondo de cada SkillItem en src/components/SkillItem.astro.',
+  },
+  {
+    name: 'WhatsApp base',
+    token: 'bg-green-500',
+    textClass: 'text-white',
+    usage: 'Estado por defecto del boton flotante de WhatsApp.',
+  },
+  {
+    name: 'WhatsApp hover',
+    token: 'bg-green-600',
+    textClass: 'text-white',
+    usage: 'Estado hover del boton flotante de WhatsApp.',
+  },
+];
+
+const textColors = [
+  {
+    name: 'Texto principal',
+    token: 'text-black',
+    sampleClass: 'bg-black',
+    textClass: 'text-white',
+    usage: 'Cuerpo de los blogs y estados hover en tarjetas.',
+  },
+  {
+    name: 'Links destacados',
+    token: 'text-blue-600',
+    sampleClass: 'bg-blue-600',
+    textClass: 'text-white',
+    usage: 'Hover de contacto en layouts de blog.',
+  },
+  {
+    name: 'Credito footer',
+    token: 'text-blue-900',
+    sampleClass: 'bg-blue-900',
+    textClass: 'text-white',
+    usage: 'Texto del credito opcional en el footer.',
+  },
+  {
+    name: 'Metadatos claros',
+    token: 'text-gray-500',
+    sampleClass: 'bg-gray-500',
+    textClass: 'text-white',
+    usage: 'Fechas y etiquetas de articulos en layouts de blog.',
+  },
+  {
+    name: 'Texto footer',
+    token: 'text-gray-700',
+    sampleClass: 'bg-gray-700',
+    textClass: 'text-white',
+    usage: 'Texto base del footer y badges.',
+  },
+  {
+    name: 'Texto de tags',
+    token: 'text-gray-800',
+    sampleClass: 'bg-gray-800',
+    textClass: 'text-white',
+    usage: 'Contenido de las etiquetas en layouts de blog.',
+  },
+  {
+    name: 'Tarjetas secundarias',
+    token: 'text-slate-500',
+    sampleClass: 'bg-slate-500',
+    textClass: 'text-white',
+    usage: 'Tarjetas de proyectos, contacto y experiencia.',
+  },
+  {
+    name: 'Subtitulos',
+    token: 'text-slate-600',
+    sampleClass: 'bg-slate-600',
+    textClass: 'text-white',
+    usage: 'Subtitulos y headings secundarios en secciones.',
+  },
+  {
+    name: 'Copy principal',
+    token: 'text-slate-700',
+    sampleClass: 'bg-slate-700',
+    textClass: 'text-white',
+    usage: 'Parrafos principales en secciones About, Blog y Contact.',
+  },
+  {
+    name: 'Hover Navbar',
+    token: 'text-slate-950',
+    sampleClass: 'bg-slate-950',
+    textClass: 'text-white',
+    usage: 'Hover de los enlaces del menu en el Navbar.',
+  },
+];
+
+const borderColors = [
+  {
+    name: 'Divisores sutiles',
+    token: 'border-gray-200',
+    usage: 'Separadores en el footer y los layouts de blog.',
+  },
+  {
+    name: 'Resaltado hover',
+    token: 'border-black',
+    usage: 'Bordes en hover para tarjetas de proyectos, contacto y blog.',
+  },
+];
+
+const customColors = [
+  {
+    name: 'Azul enlaces',
+    value: '#2980b9',
+    textColor: '#ffffff',
+    usage: 'Enlaces y cuadros destacados en src/styles/blog.css:49-62.',
+  },
+  {
+    name: 'Gris bloque cita',
+    value: '#e9ecef',
+    textColor: '#111111',
+    usage: 'Fondo de citas en src/styles/blog.css:61.',
+  },
+  {
+    name: 'Gris codigo',
+    value: '#f8f8f8',
+    textColor: '#111111',
+    usage: 'Fondo de bloques de codigo en src/styles/blog.css:67.',
+  },
+  {
+    name: 'Borde codigo',
+    value: '#ddd',
+    textColor: '#111111',
+    usage: 'Borde de bloques de codigo en src/styles/blog.css:68.',
+  },
+];
+---
+
+<MainLayout
+  title='Colores del sitio | Pixory'
+  description='Visualizacion de todos los colores utilizados en el sitio de Pixory.'
+>
+  <Navbar navLinks={navLinks} client:load />
+  <main class='max-w-6xl mx-auto px-4 md:px-8 py-12 space-y-16'>
+    <header class='space-y-3 text-center md:text-left'>
+      <h1 class='text-4xl font-bold text-black'>Paleta de colores</h1>
+      <p class='text-slate-600 md:max-w-3xl'>
+        Referencia rapida de los colores activos en el proyecto. Agrupamos clases de
+        Tailwind y valores hex utilizados manualmente para que puedas mantener consistencia
+        al crear nuevas secciones o componentes.
+      </p>
+    </header>
+
+    <section class='space-y-5'>
+      <div class='flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between'>
+        <h2 class='text-2xl font-semibold text-slate-700'>
+          Fondos y superficies
+        </h2>
+        <p class='text-sm text-slate-600'>
+          Clases <code>bg-*</code> presentes en componentes y layouts.
+        </p>
+      </div>
+      <div class='grid gap-6 sm:grid-cols-2 lg:grid-cols-3'>
+        {
+          backgroundColors.map((color) => (
+            <div class='flex flex-col gap-3 rounded-xl border border-gray-200 p-4'>
+              <div class={`h-16 w-full rounded-md border border-gray-200 ${color.token}`}></div>
+              <div class='space-y-1'>
+                <p class='font-semibold text-slate-700'>{color.name}</p>
+                <p class='text-sm font-mono text-slate-600'>{color.token}</p>
+                <p class='text-sm text-slate-600'>{color.usage}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class='space-y-5'>
+      <div class='flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between '>
+        <h2 class='text-2xl font-semibold text-slate-700'>
+          Colores de texto
+        </h2>
+        <p class='text-sm text-slate-600'>
+          Clases <code>text-*</code> empleadas en parrafos, enlaces y etiquetas.
+        </p>
+      </div>
+      <div class='grid gap-6 sm:grid-cols-2 lg:grid-cols-3'>
+        {
+          textColors.map((color) => (
+            <div class='flex flex-col gap-3 rounded-xl border border-gray-200 p-4'>
+              <div
+                class={`flex h-16 w-full items-center justify-center rounded-md border border-gray-200 ${color.sampleClass} ${color.textClass}`}
+              >
+                Aa
+              </div>
+              <div class='space-y-1'>
+                <p class='font-semibold text-slate-700'>{color.name}</p>
+                <p class='text-sm font-mono text-slate-600'>{color.token}</p>
+                <p class='text-sm text-slate-600'>{color.usage}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class='space-y-5'>
+      <div class='flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between'>
+        <h2 class='text-2xl font-semibold text-slate-700'>Bordes</h2>
+        <p class='text-sm text-slate-600'>
+          Clases usadas para delinear tarjetas y separadores.
+        </p>
+      </div>
+      <div class='grid gap-6 sm:grid-cols-2 lg:grid-cols-3'>
+        {
+          borderColors.map((color) => (
+            <div class='flex flex-col gap-3 rounded-xl border border-gray-200 p-4'>
+              <div
+                class={`flex h-16 w-full items-center justify-center rounded-md bg-white ${color.token} border-4`}
+              >
+              </div>
+              <div class='space-y-1'>
+                <p class='font-semibold text-slate-700'>{color.name}</p>
+                <p class='text-sm font-mono text-slate-600'>{color.token}</p>
+                <p class='text-sm text-slate-600'>{color.usage}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class='space-y-5'>
+      <div class='flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between'>
+        <h2 class='text-2xl font-semibold text-slate-700'>Colores en CSS</h2>
+        <p class='text-sm text-slate-600'>
+          Valores hex definidos manualmente en <code>src/styles/blog.css</code>.
+        </p>
+      </div>
+      <div class='grid gap-6 sm:grid-cols-2 lg:grid-cols-3'>
+        {
+          customColors.map((color) => (
+            <div class='flex flex-col gap-3 rounded-xl border border-gray-200 p-4'>
+              <div
+                class='flex h-16 w-full items-center justify-center rounded-md border border-gray-200'
+                style={`background-color: ${color.value}; color: ${color.textColor};`}
+              >
+                Aa
+              </div>
+              <div class='space-y-1'>
+                <p class='font-semibold text-slate-700'>{color.name}</p>
+                <p class='text-sm font-mono text-slate-600'>{color.value}</p>
+                <p class='text-sm text-slate-600'>{color.usage}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+  <Footer navLinks={navLinks} />
+</MainLayout>

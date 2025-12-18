@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(cmd /c quick-push.bat \"Add misty blur scroll reveal animations\")"
+    ]
+  }
+}
