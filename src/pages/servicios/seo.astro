@@ -1,0 +1,298 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import ScrollReveal from '../../components/ScrollReveal';
+import Section from '../../components/Section.astro';
+import { navLinks, clientLogos } from '../../data';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer.astro';
+import LogoSlider from '../../components/LogoSlider';
+---
+
+<MainLayout
+  title="Posicionamiento SEO en Chile | Agencia SEO Experta | Pixory"
+  description="Posicionamiento orgánico con resultados comprobados. Auditorías SEO, optimización on-page, link building y contenidos estratégicos. +15 años mejorando rankings en Google."
+  url="https://www.pixory.cl/servicios/seo"
+  image="/og-seo.jpg"
+>
+  <Section styles='p-1'>
+    <Navbar navLinks={navLinks} client:load />
+
+    <!-- Hero Section -->
+    <ScrollReveal client:load>
+      <div class="hero-section min-h-[60vh] flex flex-col justify-center items-center text-center px-5 py-16">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          Posicionamiento SEO: Aumenta tu Visibilidad en Google
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-700 max-w-3xl mb-8">
+          Estrategias SEO comprobadas que llevan tu sitio a la primera página de Google. Más tráfico orgánico, más clientes, más ventas.
+        </p>
+        <a
+          href="#contacto"
+          class="bg-black text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-slate-800 transition-all duration-300"
+        >
+          Solicitar Auditoría SEO Gratuita
+        </a>
+      </div>
+    </ScrollReveal>
+
+    <!-- What's Included Section -->
+    <ScrollReveal client:load delay={0.2}>
+      <div class="py-16 px-5 bg-slate-50">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">
+            ¿Qué incluye nuestro servicio de SEO?
+          </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="text-xl font-bold mb-3">Auditoría SEO Técnica</h3>
+              <p class="text-slate-700">Análisis completo de tu sitio: velocidad, indexación, estructura, errores técnicos y oportunidades de mejora.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="text-xl font-bold mb-3">Investigación de Palabras Clave</h3>
+              <p class="text-slate-700">Identificamos las keywords más valiosas para tu negocio con alto volumen de búsqueda y baja competencia.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="text-xl font-bold mb-3">Optimización On-Page</h3>
+              <p class="text-slate-700">Meta tags, headers, URLs, imágenes y contenido optimizado para máxima relevancia y conversión.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="text-xl font-bold mb-3">Contenidos Optimizados</h3>
+              <p class="text-slate-700">Creación de contenido estratégico que atrae tráfico calificado y posiciona tu marca como autoridad.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="text-xl font-bold mb-3">Link Building Estratégico</h3>
+              <p class="text-slate-700">Construcción de enlaces de calidad que aumentan tu autoridad de dominio y mejoran rankings.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="text-xl font-bold mb-3">Reportes Mensuales</h3>
+              <p class="text-slate-700">Seguimiento detallado de posiciones, tráfico orgánico, conversiones y ROI con dashboards personalizados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- Benefits Section -->
+    <ScrollReveal client:load delay={0.3}>
+      <div class="py-16 px-5">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">
+            Beneficios de trabajar con Pixory
+          </h2>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="flex gap-4">
+              <div class="text-4xl">📈</div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Tráfico Orgánico Sostenible</h3>
+                <p class="text-slate-700">Resultados a largo plazo que siguen generando visitas sin depender de publicidad pagada.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="text-4xl">🎯</div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Mayor Autoridad de Dominio</h3>
+                <p class="text-slate-700">Construimos la reputación de tu sitio ante Google para posicionar por keywords competitivas.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="text-4xl">💰</div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">ROI a Largo Plazo</h3>
+                <p class="text-slate-700">El SEO es la inversión más rentable: los resultados se mantienen y mejoran con el tiempo.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="text-4xl">🌐</div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Visibilidad 24/7</h3>
+                <p class="text-slate-700">Tu sitio aparece en Google las 24 horas, captando clientes mientras duermes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- Process Section -->
+    <ScrollReveal client:load delay={0.4}>
+      <div class="py-16 px-5 bg-slate-50">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">
+            Nuestro proceso SEO
+          </h2>
+          <div class="space-y-8">
+            <div class="flex gap-6 items-start">
+              <div class="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Auditoría Inicial</h3>
+                <p class="text-slate-700">Análisis profundo de tu sitio, competencia y oportunidades. Identificamos quick wins y estrategia a largo plazo.</p>
+              </div>
+            </div>
+            <div class="flex gap-6 items-start">
+              <div class="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Estrategia Personalizada</h3>
+                <p class="text-slate-700">Diseñamos un plan SEO único para tu negocio, objetivos y presupuesto. No hay dos estrategias iguales.</p>
+              </div>
+            </div>
+            <div class="flex gap-6 items-start">
+              <div class="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Implementación Técnica</h3>
+                <p class="text-slate-700">Optimizamos la estructura, velocidad, indexación y todos los aspectos técnicos de tu sitio.</p>
+              </div>
+            </div>
+            <div class="flex gap-6 items-start">
+              <div class="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">4</div>
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Creación de Contenido</h3>
+                <p class="text-slate-700">Desarrollamos contenido optimizado que atrae tu audiencia objetivo y mejora rankings.</p>
+              </div>
+            </div>
+            <div class="flex gap-6 items-start">
+              <div class="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">5</div>
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Monitoreo y Optimización Continua</h3>
+                <p class="text-slate-700">Seguimiento constante, ajustes estratégicos y mejora continua basada en datos reales.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- Tools Section -->
+    <ScrollReveal client:load delay={0.5}>
+      <div class="py-16 px-5">
+        <div class="max-w-6xl mx-auto text-center">
+          <h2 class="text-3xl md:text-5xl font-bold mb-8">
+            Herramientas que utilizamos
+          </h2>
+          <p class="text-xl text-slate-700 mb-12 max-w-3xl mx-auto">
+            Trabajamos con las mejores plataformas SEO del mercado para obtener datos precisos y resultados comprobables.
+          </p>
+          <div class="flex flex-wrap justify-center gap-6 text-lg text-slate-700">
+            <span class="bg-slate-100 px-6 py-3 rounded-full">SEMrush</span>
+            <span class="bg-slate-100 px-6 py-3 rounded-full">Google Analytics 4</span>
+            <span class="bg-slate-100 px-6 py-3 rounded-full">Search Console</span>
+            <span class="bg-slate-100 px-6 py-3 rounded-full">Screaming Frog</span>
+            <span class="bg-slate-100 px-6 py-3 rounded-full">Ahrefs</span>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- Client Logos -->
+    <ScrollReveal client:load delay={0.6}>
+      <div class="w-full bg-slate-50 border-y border-slate-200">
+        <div class="text-center py-8">
+          <h2 class="text-2xl md:text-3xl font-bold mb-2">Confían en nosotros</h2>
+          <p class="text-slate-600">Empresas que han mejorado su posicionamiento con Pixory</p>
+        </div>
+        <LogoSlider logos={clientLogos} client:load />
+      </div>
+    </ScrollReveal>
+
+    <!-- FAQ Section -->
+    <ScrollReveal client:load delay={0.7}>
+      <div class="py-16 px-5">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">
+            Preguntas frecuentes
+          </h2>
+          <div class="space-y-6">
+            <div class="border-b border-slate-200 pb-6">
+              <h3 class="text-xl font-bold mb-3">¿Cuánto tarda en verse resultados con SEO?</h3>
+              <p class="text-slate-700">El SEO es una estrategia a mediano-largo plazo. Los primeros resultados suelen verse entre 3-6 meses, pero el impacto real se consolida entre 6-12 meses. A diferencia de la publicidad pagada, los resultados son sostenibles y mejoran con el tiempo.</p>
+            </div>
+            <div class="border-b border-slate-200 pb-6">
+              <h3 class="text-xl font-bold mb-3">¿Qué incluye una auditoría SEO?</h3>
+              <p class="text-slate-700">Nuestra auditoría analiza más de 100 factores: velocidad del sitio, estructura técnica, contenido, enlaces, competencia, keywords, indexación, errores, y oportunidades de mejora. Recibes un informe completo con prioridades y plan de acción.</p>
+            </div>
+            <div class="border-b border-slate-200 pb-6">
+              <h3 class="text-xl font-bold mb-3">¿Cómo miden el éxito del SEO?</h3>
+              <p class="text-slate-700">Medimos múltiples KPIs: posiciones de keywords objetivo, tráfico orgánico, conversiones, autoridad de dominio, tasa de rebote, tiempo en sitio y ROI. Reportes mensuales con dashboards en tiempo real.</p>
+            </div>
+            <div class="border-b border-slate-200 pb-6">
+              <h3 class="text-xl font-bold mb-3">¿Garantizan la primera posición en Google?</h3>
+              <p class="text-slate-700">No prometemos posiciones específicas porque Google cambia constantemente sus algoritmos. Lo que sí garantizamos es trabajo profesional, mejoras medibles y transparencia total. Nuestros clientes ven resultados consistentes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- CTA Section -->
+    <ScrollReveal client:load delay={0.8}>
+      <div class="py-16 px-5 bg-black text-white" id="contacto">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-5xl font-bold mb-6">
+            ¿Listo para aparecer en la primera página de Google?
+          </h2>
+          <p class="text-xl mb-8 opacity-90">
+            Solicita una auditoría SEO gratuita y descubre cómo podemos mejorar tu posicionamiento
+          </p>
+          <a
+            href="mailto:contacto@pixory.cl?subject=Solicitud de Auditoría SEO"
+            class="inline-block bg-white text-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-slate-100 transition-all duration-300"
+          >
+            Hablar con un especialista SEO
+          </a>
+        </div>
+      </div>
+    </ScrollReveal>
+
+  </Section>
+
+  <Footer navLinks={navLinks} />
+</MainLayout>
+
+<!-- Service Schema -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Posicionamiento SEO",
+  "provider": {
+    "@type": "Organization",
+    "name": "Pixory Marketing",
+    "url": "https://www.pixory.cl"
+  },
+  "areaServed": "Chile",
+  "description": "Servicios de posicionamiento SEO orgánico: auditorías técnicas, optimización on-page, link building y contenidos estratégicos para mejorar rankings en Google.",
+  "offers": {
+    "@type": "Offer",
+    "description": "Estrategias SEO personalizadas para aumentar tráfico orgánico y mejorar conversiones"
+  }
+})} />
+
+<!-- FAQ Schema -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tarda en verse resultados con SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El SEO es una estrategia a mediano-largo plazo. Los primeros resultados suelen verse entre 3-6 meses, pero el impacto real se consolida entre 6-12 meses. A diferencia de la publicidad pagada, los resultados son sostenibles y mejoran con el tiempo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué incluye una auditoría SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nuestra auditoría analiza más de 100 factores: velocidad del sitio, estructura técnica, contenido, enlaces, competencia, keywords, indexación, errores, y oportunidades de mejora. Recibes un informe completo con prioridades y plan de acción."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo miden el éxito del SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Medimos múltiples KPIs: posiciones de keywords objetivo, tráfico orgánico, conversiones, autoridad de dominio, tasa de rebote, tiempo en sitio y ROI. Reportes mensuales con dashboards en tiempo real."
+      }
+    }
+  ]
+})} />

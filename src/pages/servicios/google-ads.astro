@@ -1,0 +1,344 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import ScrollReveal from '../../components/ScrollReveal';
+import Section from '../../components/Section.astro';
+import { navLinks, clientLogos } from '../../data';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer.astro';
+import LogoSlider from '../../components/LogoSlider';
+---
+
+<MainLayout
+  title="Campañas Google Ads en Chile | Publicidad Digital Efectiva | Pixory"
+  description="Expertos en Google Ads: campañas Search, Display y Performance Max optimizadas para conversión. Reduce costos y maximiza ROI con estrategias basadas en datos."
+  url="https://www.pixory.cl/servicios/google-ads"
+  image="/og-google-ads.jpg"
+>
+  <Section styles='p-1'>
+    <Navbar navLinks={navLinks} client:load />
+
+    <!-- Hero Section -->
+    <ScrollReveal client:load>
+      <div class="hero-section min-h-[60vh] flex flex-col justify-center items-center text-center px-5 py-16">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          Campañas Google Ads que Convierten
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-700 max-w-3xl mb-8">
+          Publicidad digital inteligente que lleva clientes a tu negocio. Campañas optimizadas para conversión con resultados inmediatos y ROI medible.
+        </p>
+        <a
+          href="#contacto"
+          class="bg-black text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-slate-800 transition-all duration-300"
+        >
+          Solicitar Auditoría de Cuentas Gratuita
+        </a>
+      </div>
+    </ScrollReveal>
+
+    <!-- Campaign Types Section -->
+    <ScrollReveal client:load delay={0.2}>
+      <div class="py-16 px-5 bg-slate-50">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">
+            Tipos de Campañas Google Ads
+          </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="text-xl font-bold mb-3">Google Search</h3>
+              <p class="text-slate-700">Anuncios en resultados de búsqueda. Captura usuarios con alta intención de compra buscando tus productos o servicios.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="text-xl font-bold mb-3">Performance Max</h3>
+              <p class="text-slate-700">Campaña multicanal automatizada con IA de Google. Alcanza a tu audiencia en Search, Display, YouTube y Gmail simultáneamente.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="text-xl font-bold mb-3">Display & Remarketing</h3>
+              <p class="text-slate-700">Anuncios visuales en millones de sitios web. Recupera visitantes que no convirtieron con remarketing inteligente.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="text-xl font-bold mb-3">Google Shopping</h3>
+              <p class="text-slate-700">Anuncios de productos para e-commerce. Muestra tus productos con imagen, precio y valoraciones directamente en Google.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- What's Included Section -->
+    <ScrollReveal client:load delay={0.3}>
+      <div class="py-16 px-5">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">
+            ¿Qué incluye nuestro servicio de Google Ads?
+          </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-slate-50 p-6 rounded-lg">
+              <h3 class="text-xl font-bold mb-3">Auditoría de Cuentas</h3>
+              <p class="text-slate-700">Análisis exhaustivo de tus campañas actuales: estructura, keywords, pujas, anuncios y oportunidades de mejora.</p>
+            </div>
+            <div class="bg-slate-50 p-6 rounded-lg">
+              <h3 class="text-xl font-bold mb-3">Investigación de Keywords</h3>
+              <p class="text-slate-700">Identificamos las palabras clave más rentables con equilibrio entre volumen, competencia y costo por clic.</p>
+            </div>
+            <div class="bg-slate-50 p-6 rounded-lg">
+              <h3 class="text-xl font-bold mb-3">Creación de Campañas</h3>
+              <p class="text-slate-700">Estructuramos campañas optimizadas con grupos de anuncios segmentados y copy persuasivo orientado a conversión.</p>
+            </div>
+            <div class="bg-slate-50 p-6 rounded-lg">
+              <h3 class="text-xl font-bold mb-3">Optimización de Landing Pages</h3>
+              <p class="text-slate-700">Recomendaciones para mejorar la conversión de tus páginas de destino y reducir costo por adquisición.</p>
+            </div>
+            <div class="bg-slate-50 p-6 rounded-lg">
+              <h3 class="text-xl font-bold mb-3">Gestión de Pujas Inteligente</h3>
+              <p class="text-slate-700">Estrategias de puja automatizadas con IA de Google para maximizar conversiones dentro de tu presupuesto.</p>
+            </div>
+            <div class="bg-slate-50 p-6 rounded-lg">
+              <h3 class="text-xl font-bold mb-3">Reportes en Tiempo Real</h3>
+              <p class="text-slate-700">Dashboards personalizados con métricas clave: impresiones, clics, CTR, CPC, conversiones y ROI.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- Benefits Section -->
+    <ScrollReveal client:load delay={0.4}>
+      <div class="py-16 px-5 bg-slate-50">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">
+            Beneficios de trabajar con Pixory
+          </h2>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="flex gap-4">
+              <div class="text-4xl">⚡</div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Resultados Inmediatos</h3>
+                <p class="text-slate-700">Tus anuncios aparecen desde el primer día. Genera tráfico calificado y leads mientras trabajas en SEO a largo plazo.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="text-4xl">💸</div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Control Total del Presupuesto</h3>
+                <p class="text-slate-700">Defines el presupuesto diario y mensual. Pagas solo por clics reales, sin compromisos de permanencia.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="text-4xl">🎯</div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Segmentación Precisa</h3>
+                <p class="text-slate-700">Alcanza exactamente a tu cliente ideal por ubicación, edad, intereses, dispositivo y comportamiento de búsqueda.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="text-4xl">📊</div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Medición en Tiempo Real</h3>
+                <p class="text-slate-700">Transparencia total con métricas actualizadas cada hora. Sabes exactamente qué funciona y qué optimizar.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="text-4xl">🔄</div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Optimización Continua</h3>
+                <p class="text-slate-700">Ajustamos pujas, keywords y anuncios semanalmente para mejorar resultados y reducir costos constantemente.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="text-4xl">🏆</div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Google Partners Certificados</h3>
+                <p class="text-slate-700">Equipo certificado en Google Ads con acceso a recursos exclusivos y soporte directo de Google.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- Process Section -->
+    <ScrollReveal client:load delay={0.5}>
+      <div class="py-16 px-5">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">
+            Nuestro proceso Google Ads
+          </h2>
+          <div class="space-y-8">
+            <div class="flex gap-6 items-start">
+              <div class="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Análisis de Negocio</h3>
+                <p class="text-slate-700">Entendemos tu producto, competencia, audiencia y objetivos. Definimos KPIs claros y metas alcanzables.</p>
+              </div>
+            </div>
+            <div class="flex gap-6 items-start">
+              <div class="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Estrategia y Configuración</h3>
+                <p class="text-slate-700">Diseñamos estructura de campañas, seleccionamos keywords, creamos anuncios y configuramos seguimiento de conversiones.</p>
+              </div>
+            </div>
+            <div class="flex gap-6 items-start">
+              <div class="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Lanzamiento Controlado</h3>
+                <p class="text-slate-700">Activamos campañas con presupuesto inicial conservador. Monitoreamos de cerca las primeras 72 horas.</p>
+              </div>
+            </div>
+            <div class="flex gap-6 items-start">
+              <div class="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">4</div>
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Optimización Semanal</h3>
+                <p class="text-slate-700">Ajustamos pujas, agregamos keywords negativas, pausamos bajo rendimiento, probamos nuevos anuncios.</p>
+              </div>
+            </div>
+            <div class="flex gap-6 items-start">
+              <div class="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">5</div>
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Escalamiento Rentable</h3>
+                <p class="text-slate-700">Aumentamos inversión en lo que funciona. Expandimos a nuevas audiencias y canales manteniendo ROI positivo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- Certification Badge Section -->
+    <ScrollReveal client:load delay={0.6}>
+      <div class="py-16 px-5 bg-slate-50">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-5xl font-bold mb-8">
+            Google Ads Certified Partners
+          </h2>
+          <p class="text-xl text-slate-700 mb-8 max-w-3xl mx-auto">
+            Nuestro equipo está certificado por Google en Search, Display, Video y Shopping. Somos Google Partners con acceso a beta features y soporte prioritario.
+          </p>
+          <div class="flex flex-wrap justify-center gap-6 text-lg">
+            <span class="bg-white px-6 py-3 rounded-full shadow-sm font-semibold">Google Search Certified</span>
+            <span class="bg-white px-6 py-3 rounded-full shadow-sm font-semibold">Display Advertising Certified</span>
+            <span class="bg-white px-6 py-3 rounded-full shadow-sm font-semibold">Shopping Ads Certified</span>
+            <span class="bg-white px-6 py-3 rounded-full shadow-sm font-semibold">Performance Max Expert</span>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- Client Logos -->
+    <ScrollReveal client:load delay={0.7}>
+      <div class="w-full bg-slate-50 border-y border-slate-200">
+        <div class="text-center py-8">
+          <h2 class="text-2xl md:text-3xl font-bold mb-2">Confían en nosotros</h2>
+          <p class="text-slate-600">Empresas que han optimizado su inversión publicitaria con Pixory</p>
+        </div>
+        <LogoSlider logos={clientLogos} client:load />
+      </div>
+    </ScrollReveal>
+
+    <!-- FAQ Section -->
+    <ScrollReveal client:load delay={0.8}>
+      <div class="py-16 px-5">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">
+            Preguntas frecuentes
+          </h2>
+          <div class="space-y-6">
+            <div class="border-b border-slate-200 pb-6">
+              <h3 class="text-xl font-bold mb-3">¿Cuánto debo invertir en Google Ads?</h3>
+              <p class="text-slate-700">Depende de tu industria, competencia y objetivos. Recomendamos un mínimo de $300.000 CLP mensuales para ver resultados significativos. Esto permite recolectar datos suficientes para optimización. Presupuestos mayores aceleran el aprendizaje y resultados.</p>
+            </div>
+            <div class="border-b border-slate-200 pb-6">
+              <h3 class="text-xl font-bold mb-3">¿Cómo se cobra el servicio de gestión?</h3>
+              <p class="text-slate-700">Cobramos un fee mensual de gestión separado de tu inversión publicitaria en Google. El fee cubre estrategia, configuración, optimización, reportes y soporte. Tu presupuesto publicitario va 100% a Google, no nos quedamos con comisión de la inversión.</p>
+            </div>
+            <div class="border-b border-slate-200 pb-6">
+              <h3 class="text-xl font-bold mb-3">¿Cuánto tiempo toma ver resultados?</h3>
+              <p class="text-slate-700">Los anuncios aparecen desde el primer día, pero la optimización real requiere 2-4 semanas de datos. El primer mes es de aprendizaje y ajustes. A partir del segundo mes esperamos ROI positivo si el producto/servicio y landing page son competitivos.</p>
+            </div>
+            <div class="border-b border-slate-200 pb-6">
+              <h3 class="text-xl font-bold mb-3">¿Garantizan resultados o conversiones?</h3>
+              <p class="text-slate-700">No garantizamos conversiones específicas porque dependen de múltiples factores (producto, precio, competencia, landing page). Lo que sí garantizamos: campañas profesionalmente estructuradas, optimización continua basada en datos, reportes transparentes y mejora constante del rendimiento.</p>
+            </div>
+            <div class="border-b border-slate-200 pb-6">
+              <h3 class="text-xl font-bold mb-3">¿Qué diferencia a Pixory de otras agencias?</h3>
+              <p class="text-slate-700">Transparencia total (acceso completo a tu cuenta), estrategia data-driven sin suposiciones, optimización semanal activa (no set-and-forget), certificaciones Google oficiales, integración con Analytics y CRM, y enfoque en ROI real, no solo clics.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- CTA Section -->
+    <ScrollReveal client:load delay={0.9}>
+      <div class="py-16 px-5 bg-black text-white" id="contacto">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-5xl font-bold mb-6">
+            ¿Listo para generar leads calificados con Google Ads?
+          </h2>
+          <p class="text-xl mb-8 opacity-90">
+            Solicita una auditoría gratuita de tus campañas actuales o una estrategia personalizada
+          </p>
+          <a
+            href="mailto:contacto@pixory.cl?subject=Consulta Google Ads - Pixory"
+            class="inline-block bg-white text-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-slate-100 transition-all duration-300"
+          >
+            Hablar con un especialista en Google Ads
+          </a>
+        </div>
+      </div>
+    </ScrollReveal>
+
+  </Section>
+
+  <Footer navLinks={navLinks} />
+</MainLayout>
+
+<!-- Service Schema -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Google Ads y Publicidad Digital",
+  "provider": {
+    "@type": "Organization",
+    "name": "Pixory Marketing",
+    "url": "https://www.pixory.cl"
+  },
+  "areaServed": "Chile",
+  "description": "Gestión profesional de campañas Google Ads: Search, Display, Performance Max y Shopping. Optimización continua para maximizar ROI.",
+  "offers": {
+    "@type": "Offer",
+    "description": "Campañas Google Ads optimizadas con certificación Google Partners oficial"
+  }
+})} />
+
+<!-- FAQ Schema -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto debo invertir en Google Ads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de tu industria, competencia y objetivos. Recomendamos un mínimo de $300.000 CLP mensuales para ver resultados significativos. Esto permite recolectar datos suficientes para optimización. Presupuestos mayores aceleran el aprendizaje y resultados."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo se cobra el servicio de gestión?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cobramos un fee mensual de gestión separado de tu inversión publicitaria en Google. El fee cubre estrategia, configuración, optimización, reportes y soporte. Tu presupuesto publicitario va 100% a Google, no nos quedamos con comisión de la inversión."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tiempo toma ver resultados?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los anuncios aparecen desde el primer día, pero la optimización real requiere 2-4 semanas de datos. El primer mes es de aprendizaje y ajustes. A partir del segundo mes esperamos ROI positivo si el producto/servicio y landing page son competitivos."
+      }
+    }
+  ]
+})} />

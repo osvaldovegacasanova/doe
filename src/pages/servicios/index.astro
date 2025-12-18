@@ -1,0 +1,233 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import ScrollReveal from '../../components/ScrollReveal';
+import Section from '../../components/Section.astro';
+import { navLinks } from '../../data';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer.astro';
+---
+
+<MainLayout
+  title="Servicios de Marketing Digital | SEO, Google Ads, IA, Analytics | Pixory"
+  description="Servicios profesionales de marketing digital: posicionamiento SEO, campañas Google Ads, automatización con IA y análisis de datos. Soluciones integrales para tu negocio."
+  url="https://www.pixory.cl/servicios"
+  image="/og-services.jpg"
+>
+  <Section styles='p-1'>
+    <Navbar navLinks={navLinks} client:load />
+
+    <!-- Hero Section -->
+    <ScrollReveal client:load>
+      <div class="hero-section min-h-[50vh] flex flex-col justify-center items-center text-center px-5 py-16">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          Servicios de Marketing Digital
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-700 max-w-3xl mb-8">
+          Soluciones integrales para impulsar tu negocio en el mundo digital. Desde posicionamiento orgánico hasta automatización con IA.
+        </p>
+      </div>
+    </ScrollReveal>
+
+    <!-- Services Grid -->
+    <ScrollReveal client:load delay={0.2}>
+      <div class="py-16 px-5 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12">
+
+          <!-- SEO Service -->
+          <a href="/servicios/seo" class="group">
+            <div class="bg-slate-50 p-8 rounded-lg hover:shadow-lg transition-all duration-300 h-full">
+              <div class="text-5xl mb-4">🔍</div>
+              <h2 class="text-3xl font-bold mb-4 group-hover:text-slate-700 transition-colors">
+                Posicionamiento SEO
+              </h2>
+              <p class="text-slate-700 mb-6 leading-relaxed">
+                Aumenta tu visibilidad en Google con estrategias de posicionamiento orgánico comprobadas. Auditorías técnicas, optimización on-page, link building y contenidos estratégicos.
+              </p>
+              <ul class="space-y-2 text-slate-700 mb-6">
+                <li>✓ Auditoría SEO completa</li>
+                <li>✓ Investigación de palabras clave</li>
+                <li>✓ Optimización técnica</li>
+                <li>✓ Creación de contenido SEO</li>
+                <li>✓ Link building estratégico</li>
+              </ul>
+              <span class="text-black font-semibold group-hover:underline">
+                Ver más sobre SEO →
+              </span>
+            </div>
+          </a>
+
+          <!-- Google Ads Service -->
+          <a href="/servicios/google-ads" class="group">
+            <div class="bg-slate-50 p-8 rounded-lg hover:shadow-lg transition-all duration-300 h-full">
+              <div class="text-5xl mb-4">📢</div>
+              <h2 class="text-3xl font-bold mb-4 group-hover:text-slate-700 transition-colors">
+                Google Ads
+              </h2>
+              <p class="text-slate-700 mb-6 leading-relaxed">
+                Campañas de publicidad digital optimizadas para conversión. Search, Display, Performance Max y Shopping. Resultados inmediatos con ROI medible.
+              </p>
+              <ul class="space-y-2 text-slate-700 mb-6">
+                <li>✓ Campañas Search y Display</li>
+                <li>✓ Performance Max multicanal</li>
+                <li>✓ Remarketing inteligente</li>
+                <li>✓ Google Shopping para e-commerce</li>
+                <li>✓ Optimización continua</li>
+              </ul>
+              <span class="text-black font-semibold group-hover:underline">
+                Ver más sobre Google Ads →
+              </span>
+            </div>
+          </a>
+
+          <!-- IA Service -->
+          <a href="/servicios/inteligencia-artificial" class="group">
+            <div class="bg-slate-50 p-8 rounded-lg hover:shadow-lg transition-all duration-300 h-full">
+              <div class="text-5xl mb-4">🤖</div>
+              <h2 class="text-3xl font-bold mb-4 group-hover:text-slate-700 transition-colors">
+                Automatización con IA
+              </h2>
+              <p class="text-slate-700 mb-6 leading-relaxed">
+                Agentes de inteligencia artificial que trabajan 24/7 para tu negocio. Automatiza captación de leads, backoffice y atención al cliente. Aumenta eficiencia hasta 10x.
+              </p>
+              <ul class="space-y-2 text-slate-700 mb-6">
+                <li>✓ Agentes de captación de leads</li>
+                <li>✓ Chatbots conversacionales</li>
+                <li>✓ Automatización de backoffice</li>
+                <li>✓ Análisis predictivo</li>
+                <li>✓ Personalización a escala</li>
+              </ul>
+              <span class="text-black font-semibold group-hover:underline">
+                Ver más sobre IA →
+              </span>
+            </div>
+          </a>
+
+          <!-- Data Analytics Service -->
+          <a href="/servicios/data-analytics" class="group">
+            <div class="bg-slate-50 p-8 rounded-lg hover:shadow-lg transition-all duration-300 h-full">
+              <div class="text-5xl mb-4">📊</div>
+              <h2 class="text-3xl font-bold mb-4 group-hover:text-slate-700 transition-colors">
+                Data Analytics
+              </h2>
+              <p class="text-slate-700 mb-6 leading-relaxed">
+                Decisiones inteligentes basadas en datos. Dashboards en tiempo real con Power BI, GA4 y Looker Studio. Análisis profundo y estrategia data-driven.
+              </p>
+              <ul class="space-y-2 text-slate-700 mb-6">
+                <li>✓ Configuración GA4 avanzada</li>
+                <li>✓ Dashboards interactivos</li>
+                <li>✓ Análisis de comportamiento</li>
+                <li>✓ KPIs personalizados</li>
+                <li>✓ Estrategia basada en datos</li>
+              </ul>
+              <span class="text-black font-semibold group-hover:underline">
+                Ver más sobre Analytics →
+              </span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- Why Choose Us Section -->
+    <ScrollReveal client:load delay={0.4}>
+      <div class="py-16 px-5 bg-slate-50">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-5xl font-bold mb-8">
+            ¿Por qué elegirnos?
+          </h2>
+          <div class="grid md:grid-cols-3 gap-8 mt-12">
+            <div>
+              <div class="text-4xl mb-4">🎯</div>
+              <h3 class="text-xl font-bold mb-3">+15 años de experiencia</h3>
+              <p class="text-slate-700">Expertos en marketing digital con resultados comprobados en múltiples industrias.</p>
+            </div>
+            <div>
+              <div class="text-4xl mb-4">📈</div>
+              <h3 class="text-xl font-bold mb-3">Enfoque en ROI</h3>
+              <p class="text-slate-700">Cada estrategia está diseñada para maximizar retorno de inversión medible.</p>
+            </div>
+            <div>
+              <div class="text-4xl mb-4">🤝</div>
+              <h3 class="text-xl font-bold mb-3">Soluciones a medida</h3>
+              <p class="text-slate-700">No hay dos negocios iguales. Creamos estrategias personalizadas para tus objetivos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- CTA Section -->
+    <ScrollReveal client:load delay={0.6}>
+      <div class="py-16 px-5">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-5xl font-bold mb-6">
+            ¿Listo para impulsar tu negocio?
+          </h2>
+          <p class="text-xl text-slate-700 mb-8">
+            Conversemos sobre tus objetivos y diseñemos una estrategia personalizada
+          </p>
+          <a
+            href="mailto:contacto@pixory.cl?subject=Consulta Servicios - Pixory"
+            class="inline-block bg-black text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-slate-800 transition-all duration-300"
+          >
+            Contactar con un especialista
+          </a>
+        </div>
+      </div>
+    </ScrollReveal>
+
+  </Section>
+
+  <Footer navLinks={navLinks} />
+</MainLayout>
+
+<!-- Service Catalog Schema -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Servicios de Marketing Digital - Pixory",
+  "description": "Catálogo completo de servicios de marketing digital",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Service",
+        "name": "Posicionamiento SEO",
+        "url": "https://www.pixory.cl/servicios/seo",
+        "description": "Servicios de optimización para motores de búsqueda"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Service",
+        "name": "Google Ads",
+        "url": "https://www.pixory.cl/servicios/google-ads",
+        "description": "Gestión profesional de campañas publicitarias en Google"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Service",
+        "name": "Automatización con IA",
+        "url": "https://www.pixory.cl/servicios/inteligencia-artificial",
+        "description": "Soluciones de automatización con inteligencia artificial"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "Service",
+        "name": "Data Analytics",
+        "url": "https://www.pixory.cl/servicios/data-analytics",
+        "description": "Análisis de datos y dashboards personalizados"
+      }
+    }
+  ]
+})} />

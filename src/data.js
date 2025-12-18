@@ -24,6 +24,7 @@ export const contactText = `Buscamos relaciones de confianza y largo plazo con n
 export const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'Nosotros', href: '/#about' },
+  { name: 'Servicios', href: '/servicios' },
   { name: 'Artículos', href: '/#blog' },
   { name: 'contacto@pixory.cl', href: 'mailto:contacto@pixory.cl' },
 ];
@@ -31,10 +32,10 @@ export const navLinks = [
 // Selected projects (side box) for main section of page
 
 export const selectedProjects = [
-  { name: 'Campañas Digitales', link: '#' },
-  { name: 'Posicionamiento Orgánico SEO', link: '#' },
-  { name: 'Automatizaciones IA', link: '#' },
-  { name: 'Estrategia', link: '#' },
+  { name: 'Campañas Digitales', link: '/servicios/google-ads' },
+  { name: 'Posicionamiento Orgánico SEO', link: '/servicios/seo' },
+  { name: 'Automatizaciones IA', link: '/servicios/inteligencia-artificial' },
+  { name: 'Estrategia', link: '/servicios/data-analytics' },
 ];
 
 // Skills section for about section of the page

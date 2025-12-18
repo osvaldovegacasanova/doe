@@ -1,0 +1,349 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import ScrollReveal from '../../components/ScrollReveal';
+import Section from '../../components/Section.astro';
+import { navLinks, clientLogos } from '../../data';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer.astro';
+import LogoSlider from '../../components/LogoSlider';
+---
+
+<MainLayout
+  title="Automatización con IA | Agentes Inteligentes para tu Negocio | Pixory"
+  description="Automatiza procesos con Inteligencia Artificial: agentes para captación de leads, optimización de backoffice y chatbots inteligentes. Aumenta eficiencia y reduce costos."
+  url="https://www.pixory.cl/servicios/inteligencia-artificial"
+  image="/og-ia.jpg"
+>
+  <Section styles='p-1'>
+    <Navbar navLinks={navLinks} client:load />
+
+    <!-- Hero Section -->
+    <ScrollReveal client:load>
+      <div class="hero-section min-h-[60vh] flex flex-col justify-center items-center text-center px-5 py-16">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          Automatización Inteligente con IA
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-700 max-w-3xl mb-8">
+          Agentes de IA que trabajan 24/7 para tu negocio. Automatiza captación de leads, backoffice y atención al cliente. Aumenta eficiencia hasta 10x.
+        </p>
+        <a
+          href="#contacto"
+          class="bg-black text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-slate-800 transition-all duration-300"
+        >
+          Descubre cómo automatizar tu negocio
+        </a>
+      </div>
+    </ScrollReveal>
+
+    <!-- AI Solutions Section -->
+    <ScrollReveal client:load delay={0.2}>
+      <div class="py-16 px-5 bg-slate-50">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">
+            Soluciones de IA para tu empresa
+          </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="text-xl font-bold mb-3">Agentes de Captación de Leads</h3>
+              <p class="text-slate-700">IA que califica leads automáticamente, responde consultas iniciales y agenda reuniones con tu equipo comercial sin intervención humana.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="text-xl font-bold mb-3">Chatbots Conversacionales</h3>
+              <p class="text-slate-700">Asistentes virtuales que entienden lenguaje natural, resuelven dudas complejas y escalan solo cuando es necesario. Atención 24/7.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="text-xl font-bold mb-3">Automatización de Backoffice</h3>
+              <p class="text-slate-700">Procesa facturas, extrae datos de documentos, actualiza sistemas y genera reportes automáticamente. Elimina trabajo manual repetitivo.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="text-xl font-bold mb-3">Análisis Predictivo</h3>
+              <p class="text-slate-700">IA que predice comportamiento de clientes, identifica oportunidades de venta cruzada y detecta riesgo de churn antes que ocurra.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="text-xl font-bold mb-3">Personalización a Escala</h3>
+              <p class="text-slate-700">Genera contenido personalizado para cada cliente, adapta mensajes automáticamente y optimiza timing de comunicaciones con IA.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="text-xl font-bold mb-3">Integración con tus Sistemas</h3>
+              <p class="text-slate-700">Conectamos la IA con tu CRM, ERP, WhatsApp Business, email y cualquier herramienta que uses. Todo sincronizado en tiempo real.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- Technologies Section -->
+    <ScrollReveal client:load delay={0.3}>
+      <div class="py-16 px-5">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-bold mb-8 text-center">
+            Tecnologías de IA que utilizamos
+          </h2>
+          <p class="text-xl text-slate-700 mb-12 text-center max-w-3xl mx-auto">
+            Trabajamos con las plataformas de IA más avanzadas del mercado para construir soluciones robustas y escalables.
+          </p>
+          <div class="flex flex-wrap justify-center gap-6 text-lg">
+            <span class="bg-slate-100 px-6 py-3 rounded-full font-semibold">OpenAI GPT-4</span>
+            <span class="bg-slate-100 px-6 py-3 rounded-full font-semibold">Anthropic Claude</span>
+            <span class="bg-slate-100 px-6 py-3 rounded-full font-semibold">N8N Automation</span>
+            <span class="bg-slate-100 px-6 py-3 rounded-full font-semibold">LangChain</span>
+            <span class="bg-slate-100 px-6 py-3 rounded-full font-semibold">Vector Databases</span>
+            <span class="bg-slate-100 px-6 py-3 rounded-full font-semibold">Zapier</span>
+            <span class="bg-slate-100 px-6 py-3 rounded-full font-semibold">Make.com</span>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- Use Cases Section -->
+    <ScrollReveal client:load delay={0.4}>
+      <div class="py-16 px-5 bg-slate-50">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">
+            Casos de uso reales
+          </h2>
+          <div class="space-y-8">
+            <div class="bg-white p-8 rounded-lg shadow-sm">
+              <h3 class="text-2xl font-bold mb-3">E-commerce: Asistente de Ventas IA</h3>
+              <p class="text-slate-700 mb-3"><strong>Problema:</strong> 70% de consultas en WhatsApp quedaban sin respuesta fuera de horario laboral.</p>
+              <p class="text-slate-700 mb-3"><strong>Solución:</strong> Chatbot IA integrado con catálogo de productos, responde consultas técnicas, recomienda productos y procesa pedidos automáticamente.</p>
+              <p class="text-slate-700"><strong>Resultado:</strong> +45% conversiones, -60% carga trabajo equipo, atención 24/7.</p>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-sm">
+              <h3 class="text-2xl font-bold mb-3">Inmobiliaria: Calificación Automática de Leads</h3>
+              <p class="text-slate-700 mb-3"><strong>Problema:</strong> Equipo comercial perdía tiempo con leads no calificados de formularios web.</p>
+              <p class="text-slate-700 mb-3"><strong>Solución:</strong> Agente IA que analiza formularios, enriquece datos, califica con scoring y solo envía leads A+ a vendedores.</p>
+              <p class="text-slate-700"><strong>Resultado:</strong> Vendedores cierran 3x más por dedicar tiempo solo a leads de alta calidad.</p>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-sm">
+              <h3 class="text-2xl font-bold mb-3">Servicios Profesionales: Automatización de Reportes</h3>
+              <p class="text-slate-700 mb-3"><strong>Problema:</strong> Analistas gastaban 10 horas semanales consolidando datos de múltiples fuentes.</p>
+              <p class="text-slate-700 mb-3"><strong>Solución:</strong> Flujo automatizado que extrae datos de GA4, CRM y facturación, genera insights con IA y envía reportes personalizados.</p>
+              <p class="text-slate-700"><strong>Resultado:</strong> 10 horas recuperadas por semana, reportes más precisos y consistentes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- Process Section -->
+    <ScrollReveal client:load delay={0.5}>
+      <div class="py-16 px-5">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">
+            Cómo implementamos IA en tu negocio
+          </h2>
+          <div class="space-y-8">
+            <div class="flex gap-6 items-start">
+              <div class="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Mapeo de Procesos</h3>
+                <p class="text-slate-700">Analizamos tus flujos de trabajo actuales, identificamos tareas repetitivas y cuellos de botella que consumen tiempo valioso del equipo.</p>
+              </div>
+            </div>
+            <div class="flex gap-6 items-start">
+              <div class="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Identificación de Oportunidades</h3>
+                <p class="text-slate-700">Priorizamos automatizaciones con mayor ROI. Calculamos ahorro de tiempo y costos para cada proceso candidato a automatizar.</p>
+              </div>
+            </div>
+            <div class="flex gap-6 items-start">
+              <div class="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Diseño de Solución IA</h3>
+                <p class="text-slate-700">Arquitectamos la solución: seleccionamos tecnologías, diseñamos flujos, definimos prompts y configuramos integraciones necesarias.</p>
+              </div>
+            </div>
+            <div class="flex gap-6 items-start">
+              <div class="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">4</div>
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Implementación y Pruebas</h3>
+                <p class="text-slate-700">Desarrollamos el agente IA, conectamos con tus sistemas existentes y probamos exhaustivamente con casos reales antes del lanzamiento.</p>
+              </div>
+            </div>
+            <div class="flex gap-6 items-start">
+              <div class="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">5</div>
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Capacitación y Monitoreo</h3>
+                <p class="text-slate-700">Entrenamos a tu equipo en el uso y supervisión de la IA. Monitoreamos performance continua y refinamos la automatización basado en resultados.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- Benefits Section -->
+    <ScrollReveal client:load delay={0.6}>
+      <div class="py-16 px-5 bg-slate-50">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">
+            Beneficios de automatizar con IA
+          </h2>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="flex gap-4">
+              <div class="text-4xl">⚡</div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Eficiencia 10x</h3>
+                <p class="text-slate-700">Tareas que tomaban horas se completan en segundos. Tu equipo se enfoca en trabajo estratégico de alto valor.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="text-4xl">💰</div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Reducción de Costos</h3>
+                <p class="text-slate-700">Automatiza trabajo manual repetitivo. ROI típico de 300-500% en el primer año de implementación.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="text-4xl">🎯</div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Cero Errores Humanos</h3>
+                <p class="text-slate-700">La IA ejecuta procesos consistentemente sin errores de transcripción, olvidos o variaciones de calidad.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="text-4xl">📈</div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Escalabilidad Sin Límites</h3>
+                <p class="text-slate-700">Atiende 1 o 10,000 clientes simultáneamente sin contratar personal adicional. Crece sin crecer costos linealmente.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="text-4xl">🌐</div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Disponibilidad 24/7</h3>
+                <p class="text-slate-700">Agentes IA trabajan mientras duermes. Nunca pierdes un lead por responder fuera de horario.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="text-4xl">📊</div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Datos y Aprendizaje Continuo</h3>
+                <p class="text-slate-700">La IA registra cada interacción, genera insights y mejora automáticamente con el uso.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- Client Logos -->
+    <ScrollReveal client:load delay={0.7}>
+      <div class="w-full bg-slate-50 border-y border-slate-200">
+        <div class="text-center py-8">
+          <h2 class="text-2xl md:text-3xl font-bold mb-2">Confían en nosotros</h2>
+          <p class="text-slate-600">Empresas que han automatizado procesos clave con Pixory</p>
+        </div>
+        <LogoSlider logos={clientLogos} client:load />
+      </div>
+    </ScrollReveal>
+
+    <!-- FAQ Section -->
+    <ScrollReveal client:load delay={0.8}>
+      <div class="py-16 px-5">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">
+            Preguntas frecuentes
+          </h2>
+          <div class="space-y-6">
+            <div class="border-b border-slate-200 pb-6">
+              <h3 class="text-xl font-bold mb-3">¿Qué procesos se pueden automatizar con IA?</h3>
+              <p class="text-slate-700">Prácticamente cualquier tarea repetitiva basada en reglas: calificación de leads, atención al cliente, procesamiento de documentos, generación de reportes, seguimiento de ventas, análisis de sentimiento, transcripción de reuniones, y mucho más. Si lo haces manualmente más de 10 veces al mes, probablemente se puede automatizar.</p>
+            </div>
+            <div class="border-b border-slate-200 pb-6">
+              <h3 class="text-xl font-bold mb-3">¿Cuánto tiempo toma implementar una solución de IA?</h3>
+              <p class="text-slate-700">Depende de la complejidad. Un chatbot básico puede estar listo en 2-3 semanas. Automatizaciones complejas con múltiples integraciones toman 6-8 semanas. Trabajamos en sprints: entregar valor rápido con MVP, luego iterar y mejorar basado en feedback real.</p>
+            </div>
+            <div class="border-b border-slate-200 pb-6">
+              <h3 class="text-xl font-bold mb-3">¿Requiere cambios en nuestros sistemas actuales?</h3>
+              <p class="text-slate-700">Generalmente no. Nos integramos con tus herramientas existentes vía APIs: CRM (Salesforce, HubSpot), WhatsApp Business, email, Google Sheets, bases de datos, etc. La IA actúa como una capa inteligente encima de tu stack tecnológico actual.</p>
+            </div>
+            <div class="border-b border-slate-200 pb-6">
+              <h3 class="text-xl font-bold mb-3">¿Qué pasa si la IA comete un error?</h3>
+              <p class="text-slate-700">Diseñamos con safety nets: validaciones, umbrales de confianza y escalamiento a humanos cuando hay incertidumbre. Para procesos críticos implementamos modo "human-in-the-loop" donde la IA sugiere pero un humano aprueba. Monitoreamos 24/7 y tenemos alertas para anomalías.</p>
+            </div>
+            <div class="border-b border-slate-200 pb-6">
+              <h3 class="text-xl font-bold mb-3">¿Cuál es el retorno de inversión típico?</h3>
+              <p class="text-slate-700">ROI promedio de 300-500% en el primer año. Por ejemplo: si automatizas un proceso que consume 20 horas semanales de un empleado ($15,000 CLP/hora), ahorras $1.2M CLP mensuales. La inversión inicial se recupera típicamente en 3-6 meses.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- CTA Section -->
+    <ScrollReveal client:load delay={0.9}>
+      <div class="py-16 px-5 bg-black text-white" id="contacto">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-5xl font-bold mb-6">
+            ¿Listo para automatizar tu negocio con IA?
+          </h2>
+          <p class="text-xl mb-8 opacity-90">
+            Agenda una consultoría gratuita y descubre qué procesos puedes automatizar en tu empresa
+          </p>
+          <a
+            href="mailto:contacto@pixory.cl?subject=Consulta Automatización IA - Pixory"
+            class="inline-block bg-white text-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-slate-100 transition-all duration-300"
+          >
+            Hablar con un especialista en IA
+          </a>
+        </div>
+      </div>
+    </ScrollReveal>
+
+  </Section>
+
+  <Footer navLinks={navLinks} />
+</MainLayout>
+
+<!-- Service Schema -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Automatización con Inteligencia Artificial",
+  "provider": {
+    "@type": "Organization",
+    "name": "Pixory Marketing",
+    "url": "https://www.pixory.cl"
+  },
+  "areaServed": "Chile",
+  "description": "Soluciones de automatización con IA: agentes inteligentes para captación de leads, chatbots conversacionales, automatización de backoffice y análisis predictivo.",
+  "offers": {
+    "@type": "Offer",
+    "description": "Automatizaciones personalizadas con IA para aumentar eficiencia y reducir costos operativos"
+  }
+})} />
+
+<!-- FAQ Schema -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué procesos se pueden automatizar con IA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Prácticamente cualquier tarea repetitiva basada en reglas: calificación de leads, atención al cliente, procesamiento de documentos, generación de reportes, seguimiento de ventas, análisis de sentimiento, transcripción de reuniones, y mucho más. Si lo haces manualmente más de 10 veces al mes, probablemente se puede automatizar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tiempo toma implementar una solución de IA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de la complejidad. Un chatbot básico puede estar listo en 2-3 semanas. Automatizaciones complejas con múltiples integraciones toman 6-8 semanas. Trabajamos en sprints: entregar valor rápido con MVP, luego iterar y mejorar basado en feedback real."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Requiere cambios en nuestros sistemas actuales?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generalmente no. Nos integramos con tus herramientas existentes vía APIs: CRM (Salesforce, HubSpot), WhatsApp Business, email, Google Sheets, bases de datos, etc. La IA actúa como una capa inteligente encima de tu stack tecnológico actual."
+      }
+    }
+  ]
+})} />

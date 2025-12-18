@@ -1,0 +1,395 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import ScrollReveal from '../../components/ScrollReveal';
+import Section from '../../components/Section.astro';
+import { navLinks, clientLogos } from '../../data';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer.astro';
+import LogoSlider from '../../components/LogoSlider';
+---
+
+<MainLayout
+  title="Data Analytics y Estrategia Digital | Decisiones Basadas en Datos | Pixory"
+  description="Análisis de datos avanzado con Power BI, GA4 y Looker Studio. Dashboards personalizados, métricas clave y estrategias data-driven para impulsar tu negocio."
+  url="https://www.pixory.cl/servicios/data-analytics"
+  image="/og-analytics.jpg"
+>
+  <Section styles='p-1'>
+    <Navbar navLinks={navLinks} client:load />
+
+    <!-- Hero Section -->
+    <ScrollReveal client:load>
+      <div class="hero-section min-h-[60vh] flex flex-col justify-center items-center text-center px-5 py-16">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          Data Analytics: Decisiones Inteligentes con Datos
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-700 max-w-3xl mb-8">
+          Transforma tus datos en estrategia. Dashboards en tiempo real, análisis predictivo y recomendaciones accionables para maximizar resultados.
+        </p>
+        <a
+          href="#contacto"
+          class="bg-black text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-slate-800 transition-all duration-300"
+        >
+          Solicitar Análisis de Datos Gratuito
+        </a>
+      </div>
+    </ScrollReveal>
+
+    <!-- Analytics Services Section -->
+    <ScrollReveal client:load delay={0.2}>
+      <div class="py-16 px-5 bg-slate-50">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">
+            Servicios de Data Analytics
+          </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="text-xl font-bold mb-3">Configuración GA4 Avanzada</h3>
+              <p class="text-slate-700">Implementación completa de Google Analytics 4 con eventos personalizados, conversiones, dimensiones y métricas específicas para tu negocio.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="text-xl font-bold mb-3">Dashboards Interactivos</h3>
+              <p class="text-slate-700">Visualizaciones en Power BI, Looker Studio o Tableau que consolidan datos de múltiples fuentes en una vista unificada y accionable.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="text-xl font-bold mb-3">Análisis de Comportamiento</h3>
+              <p class="text-slate-700">Mapas de calor, grabaciones de sesión y análisis de funnel para entender cómo los usuarios interactúan con tu sitio o app.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="text-xl font-bold mb-3">Tracking de Conversiones</h3>
+              <p class="text-slate-700">Configuración de eventos, objetivos y embudos para medir cada paso del customer journey desde click hasta venta.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="text-xl font-bold mb-3">Integración de Fuentes de Datos</h3>
+              <p class="text-slate-700">Conectamos CRM, ERP, e-commerce, Google Ads, Facebook Ads y cualquier plataforma para tener datos centralizados.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="text-xl font-bold mb-3">Estrategia Data-Driven</h3>
+              <p class="text-slate-700">Convertimos insights de datos en recomendaciones estratégicas: qué optimizar, dónde invertir, qué eliminar.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- Tools Section -->
+    <ScrollReveal client:load delay={0.3}>
+      <div class="py-16 px-5">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-bold mb-8 text-center">
+            Herramientas de análisis que dominamos
+          </h2>
+          <p class="text-xl text-slate-700 mb-12 text-center max-w-3xl mx-auto">
+            Trabajamos con las plataformas de analytics más poderosas para extraer insights de tus datos.
+          </p>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-slate-50 p-6 rounded-lg text-center">
+              <h3 class="text-lg font-bold mb-2">Power BI</h3>
+              <p class="text-slate-600 text-sm">Dashboards empresariales con integración de múltiples fuentes</p>
+            </div>
+            <div class="bg-slate-50 p-6 rounded-lg text-center">
+              <h3 class="text-lg font-bold mb-2">Google Analytics 4</h3>
+              <p class="text-slate-600 text-sm">Análisis web y app con machine learning integrado</p>
+            </div>
+            <div class="bg-slate-50 p-6 rounded-lg text-center">
+              <h3 class="text-lg font-bold mb-2">Looker Studio</h3>
+              <p class="text-slate-600 text-sm">Reportes visuales conectados al ecosistema Google</p>
+            </div>
+            <div class="bg-slate-50 p-6 rounded-lg text-center">
+              <h3 class="text-lg font-bold mb-2">Hotjar</h3>
+              <p class="text-slate-600 text-sm">Mapas de calor y grabaciones de sesiones</p>
+            </div>
+            <div class="bg-slate-50 p-6 rounded-lg text-center">
+              <h3 class="text-lg font-bold mb-2">SEMrush / Ahrefs</h3>
+              <p class="text-slate-600 text-sm">Análisis de tráfico orgánico y competencia</p>
+            </div>
+            <div class="bg-slate-50 p-6 rounded-lg text-center">
+              <h3 class="text-lg font-bold mb-2">Mixpanel</h3>
+              <p class="text-slate-600 text-sm">Product analytics para apps y SaaS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- Deliverables Section -->
+    <ScrollReveal client:load delay={0.4}>
+      <div class="py-16 px-5 bg-slate-50">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">
+            Qué recibes trabajando con nosotros
+          </h2>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-8 rounded-lg shadow-sm">
+              <h3 class="text-2xl font-bold mb-4">📊 Dashboards Interactivos</h3>
+              <p class="text-slate-700 mb-4">Paneles personalizados actualizados en tiempo real con las métricas que importan para tu negocio.</p>
+              <ul class="space-y-2 text-slate-700">
+                <li>✓ Vista ejecutiva para toma de decisiones</li>
+                <li>✓ Reportes operativos por área</li>
+                <li>✓ Acceso desde cualquier dispositivo</li>
+                <li>✓ Alertas automáticas de anomalías</li>
+              </ul>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-sm">
+              <h3 class="text-2xl font-bold mb-4">📈 Reportes Mensuales</h3>
+              <p class="text-slate-700 mb-4">Análisis detallado de performance con insights accionables y recomendaciones estratégicas.</p>
+              <ul class="space-y-2 text-slate-700">
+                <li>✓ Análisis de tendencias y patrones</li>
+                <li>✓ Comparativa vs. periodos anteriores</li>
+                <li>✓ Identificación de oportunidades</li>
+                <li>✓ Recomendaciones priorizadas</li>
+              </ul>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-sm">
+              <h3 class="text-2xl font-bold mb-4">🎯 KPIs Personalizados</h3>
+              <p class="text-slate-700 mb-4">Métricas diseñadas específicamente para tus objetivos de negocio y modelo de ingresos.</p>
+              <ul class="space-y-2 text-slate-700">
+                <li>✓ CAC (Costo de adquisición de cliente)</li>
+                <li>✓ LTV (Lifetime value)</li>
+                <li>✓ Tasa de conversión por canal</li>
+                <li>✓ ROI de marketing por campaña</li>
+              </ul>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-sm">
+              <h3 class="text-2xl font-bold mb-4">💡 Sesiones de Estrategia</h3>
+              <p class="text-slate-700 mb-4">Reuniones mensuales para revisar datos, interpretar resultados y definir siguientes pasos.</p>
+              <ul class="space-y-2 text-slate-700">
+                <li>✓ Análisis conjunto de resultados</li>
+                <li>✓ Brainstorming de optimizaciones</li>
+                <li>✓ Planificación basada en datos</li>
+                <li>✓ Q&A y capacitación continua</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- Benefits Section -->
+    <ScrollReveal client:load delay={0.5}>
+      <div class="py-16 px-5">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">
+            Por qué invertir en Data Analytics
+          </h2>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="flex gap-4">
+              <div class="text-4xl">👁️</div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Visibilidad Total del Negocio</h3>
+                <p class="text-slate-700">Entiende qué está funcionando y qué no en tiempo real. No más decisiones basadas en intuición o datos parciales.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="text-4xl">🎯</div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Identificación de Oportunidades</h3>
+                <p class="text-slate-700">Los datos revelan patrones ocultos: segmentos de alta conversión, canales infrautilizados, productos con potencial no explotado.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="text-4xl">💰</div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Optimización de Recursos</h3>
+                <p class="text-slate-700">Invierte presupuesto en lo que demuestra ROI positivo. Elimina gasto en canales o tácticas de bajo rendimiento.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="text-4xl">📊</div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Mejora Continua Basada en Datos</h3>
+                <p class="text-slate-700">Cada decisión se basa en evidencia cuantitativa. Ciclos de experimentación, medición y optimización constante.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="text-4xl">🚀</div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Ventaja Competitiva</h3>
+                <p class="text-slate-700">Mientras tu competencia adivina, tú sabes. Decisiones más rápidas y precisas que la competencia te dan ventaja estratégica.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="text-4xl">🔮</div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">Análisis Predictivo</h3>
+                <p class="text-slate-700">Identifica tendencias antes que sucedan. Predice churn, proyecta ventas y anticipa cambios de mercado.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- Process Section -->
+    <ScrollReveal client:load delay={0.6}>
+      <div class="py-16 px-5 bg-slate-50">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">
+            Nuestro proceso de implementación
+          </h2>
+          <div class="space-y-8">
+            <div class="flex gap-6 items-start">
+              <div class="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Auditoría de Datos Actual</h3>
+                <p class="text-slate-700">Evaluamos qué datos recolectas, dónde están y qué calidad tienen. Identificamos brechas y oportunidades de mejora.</p>
+              </div>
+            </div>
+            <div class="flex gap-6 items-start">
+              <div class="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Definición de KPIs y Objetivos</h3>
+                <p class="text-slate-700">Trabajamos contigo para definir qué métricas realmente importan para tu negocio y cómo medirlas efectivamente.</p>
+              </div>
+            </div>
+            <div class="flex gap-6 items-start">
+              <div class="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Configuración e Integración</h3>
+                <p class="text-slate-700">Implementamos tracking, conectamos fuentes de datos y configuramos herramientas de análisis y visualización.</p>
+              </div>
+            </div>
+            <div class="flex gap-6 items-start">
+              <div class="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">4</div>
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Creación de Dashboards</h3>
+                <p class="text-slate-700">Diseñamos dashboards personalizados que muestran la información correcta a las personas correctas en tu organización.</p>
+              </div>
+            </div>
+            <div class="flex gap-6 items-start">
+              <div class="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">5</div>
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Capacitación y Transferencia</h3>
+                <p class="text-slate-700">Entrenamos a tu equipo en el uso de herramientas y dashboards. Te empoderamos para tomar decisiones basadas en datos.</p>
+              </div>
+            </div>
+            <div class="flex gap-6 items-start">
+              <div class="bg-black text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">6</div>
+              <div>
+                <h3 class="text-2xl font-bold mb-2">Soporte y Optimización Continua</h3>
+                <p class="text-slate-700">Refinamos métricas, agregamos nuevas fuentes de datos y ajustamos dashboards basado en feedback y evolución del negocio.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- Client Logos -->
+    <ScrollReveal client:load delay={0.7}>
+      <div class="w-full bg-slate-50 border-y border-slate-200">
+        <div class="text-center py-8">
+          <h2 class="text-2xl md:text-3xl font-bold mb-2">Confían en nosotros</h2>
+          <p class="text-slate-600">Empresas que toman decisiones basadas en datos con Pixory</p>
+        </div>
+        <LogoSlider logos={clientLogos} client:load />
+      </div>
+    </ScrollReveal>
+
+    <!-- FAQ Section -->
+    <ScrollReveal client:load delay={0.8}>
+      <div class="py-16 px-5">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">
+            Preguntas frecuentes
+          </h2>
+          <div class="space-y-6">
+            <div class="border-b border-slate-200 pb-6">
+              <h3 class="text-xl font-bold mb-3">¿Qué herramientas de analytics recomiendan?</h3>
+              <p class="text-slate-700">Depende de tu presupuesto y necesidades. Para web/e-commerce: GA4 + Looker Studio (gratuito) o Power BI (empresarial). Para product analytics: Mixpanel o Amplitude. Para comportamiento: Hotjar. Evaluamos tu caso y recomendamos el stack óptimo.</p>
+            </div>
+            <div class="border-b border-slate-200 pb-6">
+              <h3 class="text-xl font-bold mb-3">¿Puedo integrar mis sistemas actuales (CRM, ERP)?</h3>
+              <p class="text-slate-700">Sí, la mayoría de plataformas modernas tienen APIs o conectores nativos. Hemos integrado Salesforce, HubSpot, Pipedrive, Shopify, WooCommerce, SAP y muchas más. Si tu sistema no tiene API, podemos usar exports programados o webhooks.</p>
+            </div>
+            <div class="border-b border-slate-200 pb-6">
+              <h3 class="text-xl font-bold mb-3">¿Qué métricas debería estar rastreando?</h3>
+              <p class="text-slate-700">Depende de tu modelo de negocio. E-commerce: tráfico, tasa de conversión, valor promedio de orden, CAC, LTV. SaaS: MRR, churn, activación, engagement. Servicios: leads calificados, pipeline, tasa de cierre, ticket promedio. Diseñamos KPI framework personalizado.</p>
+            </div>
+            <div class="border-b border-slate-200 pb-6">
+              <h3 class="text-xl font-bold mb-3">¿Cuánto tiempo toma tener dashboards funcionando?</h3>
+              <p class="text-slate-700">Un dashboard básico con datos existentes: 1-2 semanas. Implementación completa con tracking nuevo, integraciones múltiples y dashboards avanzados: 4-6 semanas. Trabajamos iterativamente: entregas rápidas de valor, luego refinamiento.</p>
+            </div>
+            <div class="border-b border-slate-200 pb-6">
+              <h3 class="text-xl font-bold mb-3">¿Necesito contratar analistas internos?</h3>
+              <p class="text-slate-700">No necesariamente. Podemos ser tu equipo de analytics completo: configuramos, monitoreamos, analizamos y recomendamos. Cuando tu negocio crezca y justifique un analista in-house, ya tendrás infraestructura madura y podemos hacer transición suave.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- CTA Section -->
+    <ScrollReveal client:load delay={0.9}>
+      <div class="py-16 px-5 bg-black text-white" id="contacto">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-5xl font-bold mb-6">
+            ¿Listo para tomar decisiones basadas en datos?
+          </h2>
+          <p class="text-xl mb-8 opacity-90">
+            Solicita un análisis gratuito de tu situación actual y descubre qué insights estás perdiendo
+          </p>
+          <a
+            href="mailto:contacto@pixory.cl?subject=Consulta Data Analytics - Pixory"
+            class="inline-block bg-white text-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-slate-100 transition-all duration-300"
+          >
+            Hablar con un especialista en Analytics
+          </a>
+        </div>
+      </div>
+    </ScrollReveal>
+
+  </Section>
+
+  <Footer navLinks={navLinks} />
+</MainLayout>
+
+<!-- Service Schema -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Data Analytics y Estrategia Digital",
+  "provider": {
+    "@type": "Organization",
+    "name": "Pixory Marketing",
+    "url": "https://www.pixory.cl"
+  },
+  "areaServed": "Chile",
+  "description": "Análisis de datos avanzado con Power BI, Google Analytics 4 y Looker Studio. Dashboards personalizados, KPIs estratégicos y decisiones data-driven.",
+  "offers": {
+    "@type": "Offer",
+    "description": "Servicios de analytics personalizados para convertir datos en estrategia accionable"
+  }
+})} />
+
+<!-- FAQ Schema -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué herramientas de analytics recomiendan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de tu presupuesto y necesidades. Para web/e-commerce: GA4 + Looker Studio (gratuito) o Power BI (empresarial). Para product analytics: Mixpanel o Amplitude. Para comportamiento: Hotjar. Evaluamos tu caso y recomendamos el stack óptimo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo integrar mis sistemas actuales (CRM, ERP)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, la mayoría de plataformas modernas tienen APIs o conectores nativos. Hemos integrado Salesforce, HubSpot, Pipedrive, Shopify, WooCommerce, SAP y muchas más. Si tu sistema no tiene API, podemos usar exports programados o webhooks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué métricas debería estar rastreando?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de tu modelo de negocio. E-commerce: tráfico, tasa de conversión, valor promedio de orden, CAC, LTV. SaaS: MRR, churn, activación, engagement. Servicios: leads calificados, pipeline, tasa de cierre, ticket promedio. Diseñamos KPI framework personalizado."
+      }
+    }
+  ]
+})} />
