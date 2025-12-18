@@ -10,14 +10,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^4.3.0",
-    "@astrojs/sitemap": "^3.5.1",
+    "@astrojs/react": "^4.4.2",
+    "@astrojs/sitemap": "^3.6.0",
     "@astrojs/tailwind": "^6.0.2",
+    "@fontsource/playfair-display": "^5.2.8",
     "@fontsource/poppins": "^5.1.0",
     "@tailwindcss/typography": "^0.5.16",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
-    "astro": "^5.13.5",
+    "astro": "^5.16.6",
     "astro-icon": "^1.1.1",
     "framer-motion": "^11.11.9",
     "react": "^18.3.1",

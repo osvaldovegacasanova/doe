@@ -5,7 +5,7 @@ import { navLinks } from '../data';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer.astro';
 import BlogItem from '../components/BlogItem.astro';
-const allPosts = await Astro.glob('./blogs/*.md');
+const allPosts = Object.values(import.meta.glob('./blogs/*.md', { eager: true }));
 allPosts.sort(
   (a, b) =>
     Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate)

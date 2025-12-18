@@ -90,3 +90,37 @@ export const contactOptions = [
 
 // for enabling/disabling maintained by text in footer, if you want.
 export const showDeveloperText = false;
+
+// Client logos for infinite slider
+export const clientLogos = [
+  {
+    name: 'Flexrack',
+    image: '/logos/cliente1v2.png',
+    url: 'https://www.flexrack.cl', // Optional
+  },
+  {
+    name: 'Hunter Douglas',
+    image: '/logos/cliente2.webp',
+    url: 'https://www.hunterdouglas.cl/',
+  },
+  {
+    name: 'Decomural',
+    image: '/logos/cliente3v2.webp',
+    url: 'https://www.decomural.cl',
+  },
+  {
+    name: 'Blase',
+    image: '/logos/Logo_Blase.webp',
+    url: 'https://www.blase.cl',
+  },
+  {
+    name: 'Andes Active',
+    image: '/logos/cliente4.png',
+    url: 'https://www.andesactive.cl',
+  },
+  {
+    name: 'Client Name 6',
+    image: '/logos/client6.svg',
+    url: 'https://client6.com',
+  },
+];

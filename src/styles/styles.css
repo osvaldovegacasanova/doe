@@ -12,6 +12,10 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+h1 {
+  font-family: 'Playfair Display', serif;
+}
+
 &::-webkit-scrollbar {
   display: none !important;
   -ms-overflow-style: none; /* IE and Edge */
