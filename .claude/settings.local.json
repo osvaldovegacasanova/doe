@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(npm install:*)",
-      "Bash(cmd /c quick-push.bat \"Add misty blur scroll reveal animations\")"
+      "Bash(cmd /c quick-push.bat \"Add misty blur scroll reveal animations\")",
+      "Bash(git commit:*)",
+      "Bash(git push)"
     ]
   }
 }

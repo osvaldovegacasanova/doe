@@ -11,11 +11,11 @@ const { aboutMe, skills, workExperiences } = Astro.props;
   >
     <div class='box introduction w-[100%] md:w-[60%] p-5'>
       <div class='box-text'>
-        <h1
+        <h2
           class='leading-[3rem] md:leading-[6.5rem] font-bold text-[3rem] md:text-[6rem]'
         >
           A la Medida
-        </h1>
+        </h2>
         <p
           class='intro-bio mt-5 md:mt-8 mb-5 leading-6 md:leading-7 md:text-2xl text-slate-700 text-justify'
         >
@@ -32,9 +32,9 @@ const { aboutMe, skills, workExperiences } = Astro.props;
     <div
       class='info-box w-[100%] md:w-[30%] md:mr-5 justify-start flex flex-col gap-5'
     >
-      <h2 class='heading text-slate-600 uppercase font-semibold ml-4'>
+      <h3 class='heading text-slate-600 uppercase font-semibold ml-4'>
         Empresa | Servicios Digitales
-      </h2>
+      </h3>
       <WorkExperienceBox workExperiences={workExperiences} />
     </div>
   </div>

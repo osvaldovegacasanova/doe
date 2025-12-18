@@ -2,6 +2,9 @@
 const {
   title = 'Agencia de Marketing en Chile | Pixory Marketing & Inteligencia',
   description = 'Agencia de Marketing | SEO | Inteligencia Artificial | Data Analytics',
+  image = '/og-image.jpg',
+  url = 'https://www.pixory.cl',
+  type = 'website',
 } = Astro.props;
 import '@fontsource/poppins/100.css';
 import '@fontsource/poppins/200.css';
@@ -21,7 +24,7 @@ import { ViewTransitions } from 'astro:transitions';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
 ---
 
-<html lang='en'>
+<html lang='es'>
   <head>
     <meta charset='utf-8' />
     <link rel='icon' type='image/svg+xml' href='/faviconpixory3.svg' />
@@ -30,6 +33,116 @@ import WhatsAppButton from '../components/WhatsAppButton.astro';
     <meta name='description' content={description} />
     <link rel='sitemap' href='/sitemap-index.xml' />
     <title>{title}</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={url} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={`https://www.pixory.cl${image}`} />
+    <meta property="og:url" content={url} />
+    <meta property="og:type" content={type} />
+    <meta property="og:locale" content="es_CL" />
+    <meta property="og:site_name" content="Pixory Marketing" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`https://www.pixory.cl${image}`} />
+    <meta name="twitter:site" content="@pixorychile" />
+
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Pixory Marketing" />
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Pixory Marketing",
+      "url": "https://www.pixory.cl",
+      "logo": "https://www.pixory.cl/Pixorylogo3.svg",
+      "description": "Agencia de marketing digital especializada en SEO, Google Ads, automatización con IA y análisis de datos",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "CL",
+        "addressLocality": "Chile"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "contacto@pixory.cl",
+        "availableLanguage": "Spanish"
+      },
+      "sameAs": [
+        "https://instagram.com/pixorychile",
+        "https://www.linkedin.com/company/pixory-marketing-chile/",
+        "https://linktr.ee/pixorymarketing"
+      ]
+    })} />
+
+    <!-- Local Business Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Pixory Marketing",
+      "image": "https://www.pixory.cl/Pixorylogo3.svg",
+      "url": "https://www.pixory.cl",
+      "telephone": "+56956460570",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "CL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.4489,
+        "longitude": -70.6693
+      },
+      "areaServed": "Chile",
+      "slogan": "Marketing para Humanos",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de Marketing Digital",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Posicionamiento SEO",
+              "description": "Optimización para motores de búsqueda"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Google Ads",
+              "description": "Campañas de publicidad digital"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Automatizaciones IA",
+              "description": "Automatización inteligente con IA"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Data Analytics",
+              "description": "Análisis de datos y estrategia"
+            }
+          }
+        ]
+      }
+    })} />
+
     {isTransitionEnabled && <ViewTransitions />}
   </head>
   <body>
