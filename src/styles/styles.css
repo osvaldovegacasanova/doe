@@ -12,9 +12,10 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-h1 {
-  font-family: 'Playfair Display', serif;
-}
+/* Typography is now controlled via Tailwind utility classes:
+   - font-serif for Playfair Display (large, important titles)
+   - font-sans for Poppins (default, body text, regular headings)
+   This decouples visual styling from semantic HTML structure */
 
 &::-webkit-scrollbar {
   display: none !important;

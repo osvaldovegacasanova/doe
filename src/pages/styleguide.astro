@@ -1,0 +1,379 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Section from '../components/Section.astro';
+import { navLinks } from '../data';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer.astro';
+---
+
+<MainLayout
+  title="Style Guide | Pixory Marketing"
+  description="Design system and style guide for Pixory Marketing website"
+  url="https://www.pixory.cl/styleguide"
+>
+  <Section styles='p-1'>
+    <Navbar navLinks={navLinks} client:load />
+
+    <div class="max-w-6xl mx-auto px-5 py-16">
+
+      <!-- Page Title -->
+      <div class="mb-16">
+        <h1 class="font-serif text-4xl md:text-6xl font-bold mb-4">Style Guide</h1>
+        <p class="text-xl text-slate-700">Design system, colors, typography and components used across the site</p>
+      </div>
+
+      <!-- Color Palette -->
+      <section class="mb-20">
+        <h2 class="text-3xl md:text-5xl font-bold mb-8">Color Palette</h2>
+
+        <div class="mb-12">
+          <h3 class="text-2xl font-bold mb-6">Primary Colors</h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div>
+              <div class="bg-black h-32 rounded-lg mb-3 border-2 border-slate-200"></div>
+              <p class="font-semibold">Black</p>
+              <p class="text-sm text-slate-600">#000000</p>
+              <p class="text-sm text-slate-600 font-mono">bg-black</p>
+            </div>
+            <div>
+              <div class="bg-white h-32 rounded-lg mb-3 border-2 border-slate-200"></div>
+              <p class="font-semibold">White</p>
+              <p class="text-sm text-slate-600">#FFFFFF</p>
+              <p class="text-sm text-slate-600 font-mono">bg-white</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="text-2xl font-bold mb-6">Slate Scale (Grays)</h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            <div>
+              <div class="bg-slate-50 h-32 rounded-lg mb-3 border-2 border-slate-200"></div>
+              <p class="font-semibold">Slate 50</p>
+              <p class="text-sm text-slate-600 font-mono">bg-slate-50</p>
+              <p class="text-xs text-slate-500">Backgrounds</p>
+            </div>
+            <div>
+              <div class="bg-slate-100 h-32 rounded-lg mb-3 border-2 border-slate-200"></div>
+              <p class="font-semibold">Slate 100</p>
+              <p class="text-sm text-slate-600 font-mono">bg-slate-100</p>
+              <p class="text-xs text-slate-500">Pills, badges</p>
+            </div>
+            <div>
+              <div class="bg-slate-200 h-32 rounded-lg mb-3 border-2 border-slate-300"></div>
+              <p class="font-semibold">Slate 200</p>
+              <p class="text-sm text-slate-600 font-mono">bg-slate-200</p>
+              <p class="text-xs text-slate-500">Borders</p>
+            </div>
+            <div>
+              <div class="bg-slate-600 h-32 rounded-lg mb-3 border-2 border-slate-700"></div>
+              <p class="font-semibold text-white">Slate 600</p>
+              <p class="text-sm text-slate-300 font-mono">text-slate-600</p>
+              <p class="text-xs text-slate-400">Secondary text</p>
+            </div>
+            <div>
+              <div class="bg-slate-700 h-32 rounded-lg mb-3 border-2 border-slate-800"></div>
+              <p class="font-semibold text-white">Slate 700</p>
+              <p class="text-sm text-slate-300 font-mono">text-slate-700</p>
+              <p class="text-xs text-slate-400">Body text</p>
+            </div>
+            <div>
+              <div class="bg-slate-800 h-32 rounded-lg mb-3 border-2 border-slate-900"></div>
+              <p class="font-semibold text-white">Slate 800</p>
+              <p class="text-sm text-slate-300 font-mono">bg-slate-800</p>
+              <p class="text-xs text-slate-400">Hover states</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Typography -->
+      <section class="mb-20">
+        <h2 class="text-3xl md:text-5xl font-bold mb-8">Typography</h2>
+
+        <div class="mb-12">
+          <h3 class="text-2xl font-bold mb-6">Font Families</h3>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-slate-50 p-6 rounded-lg">
+              <p class="text-sm text-slate-600 mb-2 font-mono">font-family: 'Playfair Display', serif</p>
+              <h1 class="text-4xl font-bold">Playfair Display</h1>
+              <p class="text-slate-700 mt-4">Used for all H1 headings. Serif font that adds elegance and sophistication.</p>
+              <div class="mt-4">
+                <p class="text-sm text-slate-600 mb-2">Sample:</p>
+                <h1 class="text-2xl">The quick brown fox jumps over the lazy dog</h1>
+              </div>
+            </div>
+            <div class="bg-slate-50 p-6 rounded-lg">
+              <p class="text-sm text-slate-600 mb-2 font-mono">font-family: 'Poppins', sans-serif</p>
+              <p class="text-4xl font-bold" style="font-family: 'Poppins', sans-serif;">Poppins</p>
+              <p class="text-slate-700 mt-4">Used for body text, H2-H6, and UI elements. Clean, modern sans-serif.</p>
+              <div class="mt-4">
+                <p class="text-sm text-slate-600 mb-2">Sample:</p>
+                <p class="text-2xl" style="font-family: 'Poppins', sans-serif;">The quick brown fox jumps over the lazy dog</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="text-2xl font-bold mb-6">Heading Styles</h3>
+          <div class="space-y-6 bg-slate-50 p-8 rounded-lg">
+            <div>
+              <p class="text-sm text-slate-600 mb-2 font-mono">H1 - font-serif text-4xl md:text-6xl lg:text-7xl font-bold</p>
+              <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl font-bold">Heading Level 1</h1>
+            </div>
+            <div>
+              <p class="text-sm text-slate-600 mb-2 font-mono">H2 - text-3xl md:text-5xl font-bold</p>
+              <h2 class="text-3xl md:text-5xl font-bold">Heading Level 2</h2>
+            </div>
+            <div>
+              <p class="text-sm text-slate-600 mb-2 font-mono">H3 - text-2xl font-bold</p>
+              <h3 class="text-2xl font-bold">Heading Level 3</h3>
+            </div>
+            <div>
+              <p class="text-sm text-slate-600 mb-2 font-mono">H4 - text-xl font-bold</p>
+              <h4 class="text-xl font-bold">Heading Level 4</h4>
+            </div>
+            <div>
+              <p class="text-sm text-slate-600 mb-2 font-mono">H5 - text-lg font-bold</p>
+              <h5 class="text-lg font-bold">Heading Level 5</h5>
+            </div>
+            <div>
+              <p class="text-sm text-slate-600 mb-2 font-mono">H6 - text-base font-bold</p>
+              <h6 class="text-base font-bold">Heading Level 6</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="text-2xl font-bold mb-6">Body Text</h3>
+          <div class="space-y-6 bg-slate-50 p-8 rounded-lg">
+            <div>
+              <p class="text-sm text-slate-600 mb-2 font-mono">text-xl md:text-2xl text-slate-700</p>
+              <p class="text-xl md:text-2xl text-slate-700">Large body text used for hero descriptions and introductory paragraphs.</p>
+            </div>
+            <div>
+              <p class="text-sm text-slate-600 mb-2 font-mono">text-lg text-slate-700</p>
+              <p class="text-lg text-slate-700">Medium body text used for emphasis and important content.</p>
+            </div>
+            <div>
+              <p class="text-sm text-slate-600 mb-2 font-mono">text-base text-slate-700 (default)</p>
+              <p class="text-slate-700">Default body text used for most content. This is the standard paragraph text you'll see throughout the site. It provides excellent readability and maintains a clean, professional appearance.</p>
+            </div>
+            <div>
+              <p class="text-sm text-slate-600 mb-2 font-mono">text-sm text-slate-600</p>
+              <p class="text-sm text-slate-600">Small text used for captions, labels, and secondary information.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Buttons & Interactive Elements -->
+      <section class="mb-20">
+        <h2 class="text-3xl md:text-5xl font-bold mb-8">Buttons & Interactive Elements</h2>
+
+        <div class="space-y-8">
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Primary Button</h3>
+            <p class="text-sm text-slate-600 mb-4 font-mono">bg-black text-white px-8 py-4 rounded-lg hover:bg-slate-800</p>
+            <a href="#" class="inline-block bg-black text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-slate-800 transition-all duration-300">
+              Primary Button
+            </a>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Secondary Button (Inverted)</h3>
+            <p class="text-sm text-slate-600 mb-4 font-mono">bg-white text-black px-8 py-4 rounded-lg hover:bg-slate-100</p>
+            <div class="bg-black p-8 rounded-lg inline-block">
+              <a href="#" class="inline-block bg-white text-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-slate-100 transition-all duration-300">
+                Secondary Button
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Link Styles</h3>
+            <p class="text-sm text-slate-600 mb-4 font-mono">text-slate-700 hover:text-black transition-all</p>
+            <div class="space-y-2">
+              <p><a href="#" class="text-slate-700 hover:text-black transition-all duration-300">Standard link with hover effect</a></p>
+              <p><a href="#" class="text-black font-semibold hover:underline">Bold link with underline on hover</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Spacing & Layout -->
+      <section class="mb-20">
+        <h2 class="text-3xl md:text-5xl font-bold mb-8">Spacing & Layout</h2>
+
+        <div class="space-y-8">
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Section Padding</h3>
+            <p class="text-slate-700 mb-4">Standard section vertical spacing:</p>
+            <div class="bg-slate-50 p-6 rounded-lg">
+              <p class="font-mono text-sm mb-2">py-16 px-5</p>
+              <p class="text-slate-600">Used for most content sections (64px vertical, 20px horizontal)</p>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Container Widths</h3>
+            <div class="space-y-4">
+              <div class="bg-slate-50 p-6 rounded-lg">
+                <p class="font-mono text-sm mb-2">max-w-6xl mx-auto</p>
+                <p class="text-slate-600">Standard content container (1152px max-width)</p>
+              </div>
+              <div class="bg-slate-50 p-6 rounded-lg">
+                <p class="font-mono text-sm mb-2">max-w-4xl mx-auto</p>
+                <p class="text-slate-600">Narrow content container (896px max-width) - used for text-heavy sections</p>
+              </div>
+              <div class="bg-slate-50 p-6 rounded-lg">
+                <p class="font-mono text-sm mb-2">max-w-3xl mx-auto</p>
+                <p class="text-slate-600">Blog posts and articles (768px max-width)</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Grid Layouts</h3>
+            <div class="space-y-4">
+              <div class="bg-slate-50 p-6 rounded-lg">
+                <p class="font-mono text-sm mb-2">grid md:grid-cols-2 gap-8</p>
+                <p class="text-slate-600">Two column grid (mobile stacks)</p>
+              </div>
+              <div class="bg-slate-50 p-6 rounded-lg">
+                <p class="font-mono text-sm mb-2">grid md:grid-cols-2 lg:grid-cols-3 gap-8</p>
+                <p class="text-slate-600">Responsive 3-column grid (2 on tablet, 1 on mobile)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Shadows & Effects -->
+      <section class="mb-20">
+        <h2 class="text-3xl md:text-5xl font-bold mb-8">Shadows & Effects</h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div>
+            <p class="text-sm text-slate-600 mb-4 font-mono">shadow-sm</p>
+            <div class="bg-white p-8 rounded-lg shadow-sm border border-slate-100">
+              <p class="text-slate-700">Small shadow</p>
+              <p class="text-sm text-slate-600 mt-2">Used for subtle elevation</p>
+            </div>
+          </div>
+          <div>
+            <p class="text-sm text-slate-600 mb-4 font-mono">shadow-md</p>
+            <div class="bg-white p-8 rounded-lg shadow-md">
+              <p class="text-slate-700">Medium shadow</p>
+              <p class="text-sm text-slate-600 mt-2">Used for card hover states</p>
+            </div>
+          </div>
+          <div>
+            <p class="text-sm text-slate-600 mb-4 font-mono">shadow-lg</p>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+              <p class="text-slate-700">Large shadow</p>
+              <p class="text-sm text-slate-600 mt-2">Used for prominent elements</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12">
+          <h3 class="text-2xl font-bold mb-4">Border Radius</h3>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div>
+              <p class="text-sm text-slate-600 mb-4 font-mono">rounded-lg</p>
+              <div class="bg-slate-100 p-8 rounded-lg">
+                <p class="text-slate-700">Standard border radius (8px)</p>
+              </div>
+            </div>
+            <div>
+              <p class="text-sm text-slate-600 mb-4 font-mono">rounded-full</p>
+              <div class="bg-slate-100 px-6 py-3 rounded-full inline-block">
+                <p class="text-slate-700">Pill shape (fully rounded)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Card Components -->
+      <section class="mb-20">
+        <h2 class="text-3xl md:text-5xl font-bold mb-8">Card Components</h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">Standard Card</h3>
+            <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h4 class="text-xl font-bold mb-3">Card Title</h4>
+              <p class="text-slate-700">Card content goes here. Used throughout service pages for features and benefits.</p>
+            </div>
+            <pre class="mt-4 bg-slate-50 p-4 rounded-lg text-sm overflow-x-auto"><code>bg-white p-6 rounded-lg shadow-sm
+hover:shadow-md transition-shadow</code></pre>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-4">Accent Card</h3>
+            <div class="bg-slate-50 p-6 rounded-lg hover:shadow-md transition-shadow">
+              <h4 class="text-xl font-bold mb-3">Card Title</h4>
+              <p class="text-slate-700">Alternative card style with background. Used for visual variety in grid layouts.</p>
+            </div>
+            <pre class="mt-4 bg-slate-50 p-4 rounded-lg text-sm overflow-x-auto"><code>bg-slate-50 p-6 rounded-lg
+hover:shadow-md transition-shadow</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Transitions -->
+      <section class="mb-20">
+        <h2 class="text-3xl md:text-5xl font-bold mb-8">Transitions & Animations</h2>
+
+        <div class="bg-slate-50 p-8 rounded-lg space-y-6">
+          <div>
+            <p class="font-mono text-sm mb-2">transition-all duration-300</p>
+            <p class="text-slate-700">Standard transition duration (300ms) used for hover effects, color changes</p>
+          </div>
+          <div>
+            <p class="font-mono text-sm mb-2">ScrollReveal animations</p>
+            <p class="text-slate-700">Blur + fade effect on scroll with configurable delay</p>
+            <pre class="mt-2 bg-white p-4 rounded text-sm overflow-x-auto"><code>initial: opacity: 0, filter: blur(10px), y: 30
+whileInView: opacity: 1, filter: blur(0px), y: 0
+duration: 0.8s, ease: [0.25, 0.4, 0.25, 1]</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Usage Notes -->
+      <section class="mb-20">
+        <h2 class="text-3xl md:text-5xl font-bold mb-8">Design Principles</h2>
+
+        <div class="space-y-6">
+          <div class="bg-slate-50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-3">Minimalism</h3>
+            <p class="text-slate-700">Clean, uncluttered design with ample white space. No decorative emojis or unnecessary visual elements.</p>
+          </div>
+          <div class="bg-slate-50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-3">Typography Hierarchy</h3>
+            <p class="text-slate-700">Clear heading hierarchy with ONE H1 per page (SEO). Visual styling is decoupled from semantic structure: use font-serif class for large, important titles regardless of heading level, font-sans (default) for regular text.</p>
+          </div>
+          <div class="bg-slate-50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-3">Monochromatic Palette</h3>
+            <p class="text-slate-700">Black and slate grays create a professional, timeless aesthetic. High contrast ensures accessibility.</p>
+          </div>
+          <div class="bg-slate-50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-3">Subtle Animations</h3>
+            <p class="text-slate-700">Scroll reveal effects and hover transitions add polish without distraction. All animations respect prefers-reduced-motion.</p>
+          </div>
+          <div class="bg-slate-50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-3">Responsive First</h3>
+            <p class="text-slate-700">Mobile-first approach with breakpoints at md (768px) and lg (1024px). Content reflows gracefully across devices.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </Section>
+
+  <Footer navLinks={navLinks} />
+</MainLayout>
