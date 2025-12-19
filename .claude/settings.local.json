@@ -4,7 +4,11 @@
       "Bash(npm install:*)",
       "Bash(cmd /c quick-push.bat \"Add misty blur scroll reveal animations\")",
       "Bash(git commit:*)",
-      "Bash(git push)"
+      "Bash(git push)",
+      "Bash(grep:*)",
+      "Bash(git add:*)",
+      "Bash(curl:*)",
+      "Bash(cat:*)"
     ]
   }
 }
