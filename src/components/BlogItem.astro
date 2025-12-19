@@ -4,7 +4,7 @@ const { post } = Astro.props;
 
 <a
   href={post.url}
-  class='group cursor-pointer flex flex-col w-full p-5 transition duration-300 text-slate-500 group hover:text-black border-b-2 hover:border-black'
+  class='group cursor-pointer flex flex-col w-full p-5 transition duration-300 text-slate-500 group hover:text-slate-800 border-b-2 hover:border-slate-800'
 >
   <div>
     <div class='flex items-center w-full gap-2'>
@@ -34,7 +34,7 @@ const { post } = Astro.props;
     }
   </p>
   <span
-    class='mt-2 font-light text-[12px] text-slate-500 group-hover:text-black'
+    class='mt-2 font-light text-[12px] text-slate-500 group-hover:text-slate-800'
     >{post.frontmatter.pubDate}</span
   >
 </a>
