@@ -3,6 +3,7 @@ import Footer from '../components/Footer.astro';
 import { navLinks } from '../data';
 
 const { frontmatter } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
 ---
 
 <html lang="es">
@@ -12,14 +13,32 @@ const { frontmatter } = Astro.props;
     <meta name="description" content={frontmatter.description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ✅ Social / SEO -->
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph / Social -->
     <meta property="og:title" content={frontmatter.title} />
     <meta property="og:description" content={frontmatter.description} />
+    <meta property="og:url" content={canonicalURL} />
     {frontmatter.heroImage && (
-      <meta property="og:image" content={frontmatter.heroImage} />
+      <meta property="og:image" content={`https://www.pixory.cl${frontmatter.heroImage}`} />
     )}
     <meta property="og:type" content="article" />
+    <meta property="og:locale" content="es_CL" />
+    <meta property="og:site_name" content="Pixory Marketing" />
+
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={frontmatter.title} />
+    <meta name="twitter:description" content={frontmatter.description} />
+    {frontmatter.heroImage && (
+      <meta name="twitter:image" content={`https://www.pixory.cl${frontmatter.heroImage}`} />
+    )}
+    <meta name="twitter:site" content="@pixorychile" />
+
+    <!-- SEO -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content={frontmatter.author || "Pixory Marketing"} />
   </head>
 
   <body class="bg-white text-slate-800 font-sans">

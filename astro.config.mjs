@@ -13,6 +13,7 @@ export default defineConfig({
   site: 'https://www.pixory.cl/',
   output: 'server',
   adapter: netlify(),
+  trailingSlash: 'always', // Ensure consistent URLs with trailing slashes
   integrations: [
     tailwind(),
     react(),
