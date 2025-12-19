@@ -134,6 +134,69 @@ This site uses **non-www (`https://pixory.cl/`)** as the canonical domain.
 2. Changed `astro.config.mjs` site URL to `https://pixory.cl/` (non-www)
 3. Let Netlify's project-level redirect handle www → non-www
 
+### The Canonical URL Mismatch Issue (Dec 2024)
+
+**⚠️ CRITICAL: Changing astro.config.mjs is NOT enough! ⚠️**
+
+**What Happened:**
+After fixing the infinite redirect loop by changing `astro.config.mjs` to use `https://pixory.cl/`, the site still showed as "not indexable" in Screaming Frog. The homepage returned HTTP 200 OK but was marked as duplicate content.
+
+**Root Cause:**
+Individual page files had **hardcoded canonical URLs** pointing to the old www domain:
+```astro
+<MainLayout
+  url="https://www.pixory.cl/"  <!-- ❌ Still using www! -->
+  ...
+>
+```
+
+This created a mismatch:
+- Page served from: `https://pixory.cl/`
+- Canonical tag says: `<link rel="canonical" href="https://www.pixory.cl/">`
+- Result: Page tells search engines "I'm a duplicate, index the www version instead"
+
+**Files with Hardcoded URLs:**
+All `.astro` pages pass `url` prop to `MainLayout`:
+- `src/pages/index.astro` - Homepage
+- `src/pages/blog.astro` - Blog listing
+- `src/pages/contacto.astro` - Contact page
+- `src/pages/servicios/index.astro` - Services listing
+- `src/pages/servicios/seo.astro` - SEO service page
+- `src/pages/servicios/google-ads.astro` - Google Ads page
+- `src/pages/servicios/inteligencia-artificial.astro` - IA page
+- `src/pages/servicios/data-analytics.astro` - Analytics page
+
+Additionally, Schema.org JSON-LD blocks in these pages also contained hardcoded www URLs.
+
+**The Complete Fix Required:**
+1. ✅ Update `astro.config.mjs` to `https://pixory.cl/`
+2. ✅ Update ALL page `url` props to remove www
+3. ✅ Update ALL Schema.org JSON-LD URLs to remove www
+4. ✅ Verify with grep search (see commands below)
+
+**How to Find All www URLs:**
+```bash
+# Search for hardcoded www URLs in page files
+grep -r "www\.pixory\.cl" src/pages/*.astro src/pages/**/*.astro 2>/dev/null | grep -v "node_modules"
+
+# Check HTML output for canonical mismatch
+curl -s https://pixory.cl/ | grep -i "canonical\|og:url"
+```
+
+**Why This Is Critical:**
+- Screaming Frog marks mismatched URLs as "not indexable"
+- Google sees duplicate content (page points to different canonical)
+- PageRank dilution across two URLs
+- Search Console will show "Duplicate without user-selected canonical" errors
+
+**Prevention for Future:**
+When changing canonical domain, you MUST update:
+1. Netlify dashboard domain settings
+2. `astro.config.mjs` site URL
+3. **ALL page-level `url` props in MainLayout calls**
+4. **ALL Schema.org JSON-LD URLs**
+5. Blog layout canonical generation (already dynamic, safe)
+
 ### How URL Canonicalization Works Now
 
 **Netlify Configuration (Project-Level):**
@@ -225,19 +288,56 @@ curl -I https://pixory.cl/blog  # Should 301 to /blog/
 
 2. **Update Astro Config:**
    ```javascript
+   // astro.config.mjs
    site: 'https://[your-canonical-domain]/'
    ```
 
-3. **Test Thoroughly:**
-   - Deploy to staging first
+3. **⚠️ CRITICAL: Update ALL Page Files (this step is often forgotten!):**
+   ```bash
+   # First, find all files with the old domain
+   grep -r "www\.pixory\.cl" src/pages/*.astro src/pages/**/*.astro 2>/dev/null
+
+   # Then update each MainLayout url prop, for example:
+   # src/pages/index.astro
+   url="https://[your-canonical-domain]/"
+
+   # Also update Schema.org JSON-LD URLs in:
+   # - src/pages/contacto.astro
+   # - src/pages/servicios/*.astro
+   ```
+
+   Files that need manual updates:
+   - `src/pages/index.astro`
+   - `src/pages/blog.astro`
+   - `src/pages/contacto.astro` (including Schema.org)
+   - `src/pages/servicios/index.astro` (including Schema.org)
+   - `src/pages/servicios/seo.astro` (including Schema.org)
+   - `src/pages/servicios/google-ads.astro` (including Schema.org)
+   - `src/pages/servicios/inteligencia-artificial.astro` (including Schema.org)
+   - `src/pages/servicios/data-analytics.astro` (including Schema.org)
+
+4. **Verify All URLs Are Consistent:**
+   ```bash
+   # Should return ZERO results (no www URLs)
+   grep -r "www\.pixory\.cl" src/pages/*.astro src/pages/**/*.astro 2>/dev/null | grep -v node_modules
+
+   # Check live HTML output
+   curl -s https://pixory.cl/ | grep -i "canonical"
+   # Should output: <link rel="canonical" href="https://pixory.cl/">
+   ```
+
+5. **Test Thoroughly:**
+   - Build locally: `npm run build && npm run preview`
    - Test all URLs with curl
    - Run Screaming Frog crawl
    - Check Google Search Console for errors
+   - Verify no "not indexable" warnings
 
-4. **Monitor After Deployment:**
+6. **Monitor After Deployment:**
    - Watch for redirect errors in Netlify logs
    - Check Google Search Console for indexing issues
    - Monitor site uptime (redirect loops cause downtime)
+   - Re-run Screaming Frog after 24 hours
 
 ## Common Development Tasks
 
