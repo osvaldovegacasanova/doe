@@ -101,9 +101,143 @@ The site uses React with Framer Motion for animations:
 ### Astro Configuration
 
 Key settings in `astro.config.mjs`:
-- **Site URL**: `https://www.pixory.cl/` - Important for sitemap generation
-- **Integrations**: Tailwind, React, Sitemap
-- Update the `site` property before deployment to ensure correct sitemap/robots.txt generation
+- **Site URL**: `https://pixory.cl/` - Important for sitemap generation
+- **Output Mode**: `'server'` - Enables SSR with Netlify adapter
+- **Trailing Slash**: `'always'` - Ensures consistent URLs (e.g., `/blog/` not `/blog`)
+- **Integrations**: Tailwind, React, Sitemap (with filters for dev pages)
+
+## CRITICAL: URL Canonicalization & Redirect Configuration
+
+**⚠️ PERMANENT CHECKPOINT - READ BEFORE ANY URL/REDIRECT CHANGES ⚠️**
+
+### Canonical Domain Decision
+
+This site uses **non-www (`https://pixory.cl/`)** as the canonical domain.
+
+**DO NOT change this without understanding the implications below.**
+
+### The Infinite Redirect Loop Issue (Dec 2024)
+
+**What Happened:**
+- Created `public/_redirects` file attempting to redirect `pixory.cl` → `www.pixory.cl`
+- Netlify project settings were configured to redirect `www.pixory.cl` → `pixory.cl`
+- This created an infinite redirect loop that broke the entire site
+
+**Root Cause:**
+- Netlify has TWO places where redirects can be configured:
+  1. **Project-level settings** (in Netlify dashboard)
+  2. **`public/_redirects` file** (in codebase)
+- These configurations conflicted, creating a loop
+
+**The Fix:**
+1. Removed `public/_redirects` file entirely
+2. Changed `astro.config.mjs` site URL to `https://pixory.cl/` (non-www)
+3. Let Netlify's project-level redirect handle www → non-www
+
+### How URL Canonicalization Works Now
+
+**Netlify Configuration (Project-Level):**
+- Redirects `www.pixory.cl/*` → `pixory.cl/*` (301 Moved Permanently)
+- This is configured in Netlify's dashboard/settings
+- **DO NOT override this with `_redirects` file**
+
+**Astro Configuration:**
+```javascript
+// astro.config.mjs
+export default defineConfig({
+  site: 'https://pixory.cl/',  // MUST match Netlify's canonical domain
+  trailingSlash: 'always',
+  // ...
+});
+```
+
+**Page-Level Canonical URLs:**
+All `.astro` pages should generate canonical URLs like this:
+```astro
+---
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
+---
+
+<head>
+  <link rel="canonical" href={canonicalURL} />
+  <meta property="og:url" content={canonicalURL} />
+</head>
+```
+
+### Rules for Future Changes
+
+**✅ SAFE to do:**
+- Update page content, components, styles
+- Add new pages with canonical URLs following the pattern above
+- Modify trailing slash behavior in `astro.config.mjs`
+
+**❌ NEVER do (without careful planning):**
+- Create `public/_redirects` file without checking Netlify dashboard settings
+- Change `site` in `astro.config.mjs` without updating Netlify configuration
+- Add redirect rules that conflict with Netlify's project-level redirects
+- Switch between www/non-www without coordinating both Netlify and Astro config
+
+**🔍 MUST verify before deployment:**
+- Test both `pixory.cl` and `www.pixory.cl` redirect correctly
+- Check that canonical URLs match the actual served domain
+- Verify no redirect chains (URL should redirect max once, if at all)
+- Run Screaming Frog or similar crawler to detect redirect issues
+
+### How to Verify Configuration
+
+```bash
+# Check non-www (should return 200 OK)
+curl -I https://pixory.cl/
+
+# Check www (should return 301 to non-www)
+curl -I https://www.pixory.cl/
+
+# Verify trailing slash redirect
+curl -I https://pixory.cl/blog  # Should 301 to /blog/
+```
+
+**Expected Results:**
+- `https://pixory.cl/` → 200 OK
+- `https://www.pixory.cl/` → 301 → `https://pixory.cl/`
+- `https://pixory.cl/blog` → 301 → `https://pixory.cl/blog/`
+
+### SEO Implications
+
+**Why This Matters:**
+- Google sees www and non-www as different sites
+- Inconsistent canonical URLs cause duplicate content penalties
+- Redirect loops prevent indexing entirely (catastrophic SEO failure)
+- Every 301 redirect loses ~1-5% link equity
+
+**Current SEO Setup:**
+- ✅ Single canonical domain (non-www)
+- ✅ Consistent trailing slashes
+- ✅ Canonical tags on all pages
+- ✅ Open Graph og:url matches canonical
+- ✅ No redirect chains or loops
+
+**If You Need to Change Canonical Domain:**
+
+1. **Update Netlify Dashboard:**
+   - Go to Site Settings → Domain Management
+   - Configure primary domain
+   - Set up redirect from alternate domain
+
+2. **Update Astro Config:**
+   ```javascript
+   site: 'https://[your-canonical-domain]/'
+   ```
+
+3. **Test Thoroughly:**
+   - Deploy to staging first
+   - Test all URLs with curl
+   - Run Screaming Frog crawl
+   - Check Google Search Console for errors
+
+4. **Monitor After Deployment:**
+   - Watch for redirect errors in Netlify logs
+   - Check Google Search Console for indexing issues
+   - Monitor site uptime (redirect loops cause downtime)
 
 ## Common Development Tasks
 
