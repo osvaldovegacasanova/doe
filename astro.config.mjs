@@ -10,7 +10,7 @@ import netlify from '@astrojs/netlify';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.pixory.cl/',
+  site: 'https://pixory.cl/',
   output: 'server',
   adapter: netlify(),
   trailingSlash: 'always', // Ensure consistent URLs with trailing slashes
