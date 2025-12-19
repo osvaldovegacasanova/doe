@@ -10,11 +10,13 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/netlify": "^6.6.3",
     "@astrojs/react": "^4.4.2",
     "@astrojs/sitemap": "^3.6.0",
     "@astrojs/tailwind": "^6.0.2",
     "@fontsource/playfair-display": "^5.2.8",
     "@fontsource/poppins": "^5.1.0",
+    "@hookform/resolvers": "^5.2.2",
     "@tailwindcss/typography": "^0.5.16",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
@@ -23,6 +25,9 @@
     "framer-motion": "^11.11.9",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "tailwindcss": "^3.4.14"
+    "react-hook-form": "^7.68.0",
+    "resend": "^6.6.0",
+    "tailwindcss": "^3.4.14",
+    "zod": "^4.2.1"
   }
 }

@@ -26,7 +26,7 @@ export const navLinks = [
   { name: 'Nosotros', href: '/#about' },
   { name: 'Servicios', href: '/servicios' },
   { name: 'Artículos', href: '/#blog' },
-  { name: 'contacto@pixory.cl', href: 'mailto:contacto@pixory.cl' },
+  { name: 'Contacto', href: '/contacto' },
 ];
 
 // Selected projects (side box) for main section of page

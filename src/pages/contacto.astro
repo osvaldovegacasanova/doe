@@ -1,0 +1,207 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import ScrollReveal from '../components/ScrollReveal';
+import Section from '../components/Section.astro';
+import { navLinks } from '../data';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer.astro';
+import ContactForm from '../components/ContactForm';
+---
+
+<MainLayout
+  title="Contacto | Conversemos sobre tu proyecto | Pixory"
+  description="¿Necesitas mejorar tu marketing digital? Contáctanos para una consulta gratuita. Especialistas en SEO, Google Ads, IA y análisis de datos en Chile."
+  url="https://www.pixory.cl/contacto"
+  image="/og-contacto.jpg"
+>
+  <Section styles='p-1'>
+    <Navbar navLinks={navLinks} client:load />
+
+    <!-- Hero Section -->
+    <ScrollReveal client:load>
+      <div class="hero-section min-h-[50vh] flex flex-col justify-center items-center text-center px-5 py-16">
+        <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          Conversemos sobre tu proyecto
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-700 max-w-3xl mb-4">
+          Cuéntanos tus objetivos y diseñaremos una estrategia de marketing digital a tu medida.
+        </p>
+        <p class="text-lg text-slate-600 max-w-2xl">
+          Respuesta en menos de 24 horas. Primera consultoría sin costo.
+        </p>
+      </div>
+    </ScrollReveal>
+
+    <!-- Contact Form Section -->
+    <ScrollReveal client:load delay={0.2}>
+      <div class="py-16 px-5 bg-slate-50">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+              Completa el formulario
+            </h2>
+            <p class="text-lg text-slate-700">
+              O si prefieres, escríbenos directamente a{' '}
+              <a
+                href="mailto:contacto@pixory.cl"
+                class="text-slate-800 font-semibold hover:underline"
+              >
+                contacto@pixory.cl
+              </a>
+            </p>
+          </div>
+
+          <ContactForm client:load />
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- Contact Methods Section -->
+    <ScrollReveal client:load delay={0.3}>
+      <div class="py-16 px-5">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+            Otras formas de contactarnos
+          </h2>
+          <div class="grid md:grid-cols-3 gap-8">
+
+            <!-- Email -->
+            <div class="text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-slate-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Email</h3>
+              <a
+                href="mailto:contacto@pixory.cl"
+                class="text-slate-700 hover:text-slate-900 hover:underline"
+              >
+                contacto@pixory.cl
+              </a>
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-slate-800" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-2">WhatsApp</h3>
+              <a
+                href="https://wa.me/56956460570?text=Hola,%20me%20gustaría%20saber%20más"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-slate-700 hover:text-slate-900 hover:underline"
+              >
+                +56 9 5646 0570
+              </a>
+            </div>
+
+            <!-- Social Media -->
+            <div class="text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-slate-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Redes Sociales</h3>
+              <div class="flex justify-center gap-4 mt-3">
+                <a
+                  href="https://instagram.com/pixorychile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-slate-700 hover:text-slate-900"
+                  aria-label="Instagram"
+                >
+                  Instagram
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/pixory-marketing-chile/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-slate-700 hover:text-slate-900"
+                  aria-label="LinkedIn"
+                >
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- FAQ Section -->
+    <ScrollReveal client:load delay={0.4}>
+      <div class="py-16 px-5 bg-slate-50">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+            Preguntas frecuentes
+          </h2>
+          <div class="space-y-6">
+            <div class="border-b border-slate-200 pb-6">
+              <h3 class="text-xl font-bold mb-3">¿Cuánto tiempo tardan en responder?</h3>
+              <p class="text-slate-700">Respondemos todos los mensajes en menos de 24 horas hábiles. Si es urgente, contáctanos por WhatsApp para una respuesta inmediata.</p>
+            </div>
+            <div class="border-b border-slate-200 pb-6">
+              <h3 class="text-xl font-bold mb-3">¿La consultoría inicial tiene costo?</h3>
+              <p class="text-slate-700">La primera consultoría es completamente gratuita. Analizamos tu situación actual y te proponemos una estrategia sin compromiso.</p>
+            </div>
+            <div class="border-b border-slate-200 pb-6">
+              <h3 class="text-xl font-bold mb-3">¿Trabajan con empresas fuera de Chile?</h3>
+              <p class="text-slate-700">Sí, trabajamos con clientes en toda Latinoamérica de forma remota. Nuestros servicios digitales no tienen fronteras.</p>
+            </div>
+            <div class="border-b border-slate-200 pb-6">
+              <h3 class="text-xl font-bold mb-3">¿Qué información necesitan para empezar?</h3>
+              <p class="text-slate-700">Solo necesitamos entender tus objetivos de negocio y tu situación actual. En la primera reunión definimos el alcance y los siguientes pasos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    <!-- CTA Section -->
+    <ScrollReveal client:load delay={0.5}>
+      <div class="py-16 px-5 bg-slate-800 text-white">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-5xl font-bold mb-6">
+            ¿Prefieres llamarnos directamente?
+          </h2>
+          <p class="text-xl mb-8 opacity-90">
+            Estamos disponibles en WhatsApp para una conversación rápida
+          </p>
+          <a
+            href="https://wa.me/56956460570?text=Hola,%20me%20gustaría%20saber%20más"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block bg-white text-slate-800 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-slate-100 transition-all duration-300"
+          >
+            Chatear por WhatsApp
+          </a>
+        </div>
+      </div>
+    </ScrollReveal>
+
+  </Section>
+
+  <Footer navLinks={navLinks} />
+</MainLayout>
+
+<!-- ContactPage Schema -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contacto - Pixory Marketing",
+  "url": "https://www.pixory.cl/contacto",
+  "description": "Contáctanos para mejorar tu marketing digital. Consultoría gratuita.",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Pixory Marketing",
+    "email": "contacto@pixory.cl",
+    "telephone": "+56956460570",
+    "url": "https://www.pixory.cl"
+  }
+})} />
