@@ -10,6 +10,7 @@ export default function ScrollReveal({
   className = ''
 }) {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -18,7 +19,15 @@ export default function ScrollReveal({
     const handleChange = (e) => setPrefersReducedMotion(e.matches);
     mediaQuery.addEventListener('change', handleChange);
 
-    return () => mediaQuery.removeEventListener('change', handleChange);
+    // Detect mobile devices
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleChange);
+      window.removeEventListener('resize', checkMobile);
+    };
   }, []);
 
   // If user prefers reduced motion, show content immediately without animation
@@ -26,13 +35,17 @@ export default function ScrollReveal({
     return <div className={className}>{children}</div>;
   }
 
+  // Reduce blur significantly on mobile to prevent rendering issues
+  const effectiveBlur = isMobile ? Math.min(blur, 3) : blur;
+  const effectiveY = isMobile ? Math.min(y, 15) : y;
+
   return (
     <motion.div
       className={className}
       initial={{
         opacity: 0,
-        filter: `blur(${blur}px)`,
-        y: y
+        filter: `blur(${effectiveBlur}px)`,
+        y: effectiveY
       }}
       whileInView={{
         opacity: 1,
@@ -40,14 +53,14 @@ export default function ScrollReveal({
         y: 0
       }}
       viewport={{
-        once: true, // Only animate once when scrolling down
-        margin: '-100px', // Start animation 100px before element enters viewport
-        amount: 0.3 // Trigger when 30% of element is visible
+        once: true,
+        margin: isMobile ? '-50px' : '-100px', // Smaller margin on mobile
+        amount: isMobile ? 0.1 : 0.3 // Lower threshold on mobile - triggers earlier
       }}
       transition={{
-        duration: duration,
-        delay: delay,
-        ease: [0.25, 0.4, 0.25, 1] // Smooth cubic-bezier easing
+        duration: isMobile ? 0.5 : duration, // Faster animations on mobile
+        delay: isMobile ? delay * 0.5 : delay, // Reduced delay on mobile
+        ease: [0.25, 0.4, 0.25, 1]
       }}
     >
       {children}

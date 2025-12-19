@@ -37,7 +37,7 @@ export default function Navbar({ navLinks }) {
           </ul>
         </div>
         <motion.div
-          className={`flex flex-col md:hidden gap-[3.5px] cursor-pointer z-50 ${
+          className={`flex flex-col md:hidden gap-[3.5px] cursor-pointer z-[9999] ${
             isToggled ? 'fixed top-6 right-5' : ''
           }`}
           onClick={() => setIsToggled((prev) => !prev)}
@@ -65,7 +65,7 @@ export default function Navbar({ navLinks }) {
         </motion.div>
       </div>
       {isToggled && (
-        <motion.div className='md:hidden fixed top-0 left-0 w-screen h-screen flex flex-col justify-center items-center z-30 bg-white'>
+        <motion.div className='md:hidden fixed top-0 left-0 w-screen h-screen flex flex-col justify-center items-center z-[9998] bg-white'>
           <motion.ul
             className='flex md:hidden flex-col items-center gap-3'
             variants={container}
