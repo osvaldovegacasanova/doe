@@ -1,0 +1,6 @@
+# Redirect non-www to www
+https://pixory.cl/* https://www.pixory.cl/:splat 301!
+
+# Force HTTPS
+http://pixory.cl/* https://www.pixory.cl/:splat 301!
+http://www.pixory.cl/* https://www.pixory.cl/:splat 301!
