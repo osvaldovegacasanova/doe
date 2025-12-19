@@ -16,9 +16,3 @@ body {
    - font-serif for Playfair Display (large, important titles)
    - font-sans for Poppins (default, body text, regular headings)
    This decouples visual styling from semantic HTML structure */
-
-&::-webkit-scrollbar {
-  display: none !important;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
