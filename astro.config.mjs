@@ -13,5 +13,13 @@ export default defineConfig({
   site: 'https://www.pixory.cl/',
   output: 'server',
   adapter: netlify(),
-  integrations: [tailwind(), react(), sitemap()],
+  integrations: [
+    tailwind(),
+    react(),
+    sitemap({
+      filter: (page) =>
+        !page.includes('/styleguide') &&
+        !page.includes('/colores')
+    })
+  ],
 });
