@@ -81,7 +81,7 @@ export async function POST({ request }) {
 
     // Send email via Resend
     const emailData = await resend.emails.send({
-      from: import.meta.env.CONTACT_FORM_FROM_EMAIL || 'noreply@pixory.cl',
+      from: import.meta.env.CONTACT_FORM_FROM_EMAIL || 'noreply@updates.pixory.cl',
       to: import.meta.env.CONTACT_FORM_TO_EMAIL || 'contacto@pixory.cl',
       replyTo: email,
       subject: `Nuevo contacto desde pixory.cl - ${name}`,

@@ -54,8 +54,8 @@ export default function ScrollReveal({
       }}
       viewport={{
         once: true,
-        margin: isMobile ? '-50px' : '-100px', // Smaller margin on mobile
-        amount: isMobile ? 0.1 : 0.3 // Lower threshold on mobile - triggers earlier
+        margin: isMobile ? '-100px' : '-200px', // Trigger earlier - 200px before element enters viewport
+        amount: 0.05 // Start animation when only 5% of element is visible for snappier reveals
       }}
       transition={{
         duration: isMobile ? 0.5 : duration, // Faster animations on mobile

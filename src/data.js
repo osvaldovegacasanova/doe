@@ -24,18 +24,18 @@ export const contactText = `Buscamos relaciones de confianza y largo plazo con n
 export const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'Nosotros', href: '/#about' },
-  { name: 'Servicios', href: '/servicios' },
+  { name: 'Servicios', href: '/servicios/' },
   { name: 'Artículos', href: '/#blog' },
-  { name: 'Contacto', href: '/contacto' },
+  { name: 'Contacto', href: '/contacto/' },
 ];
 
 // Selected projects (side box) for main section of page
 
 export const selectedProjects = [
-  { name: 'Campañas Digitales', link: '/servicios/google-ads' },
-  { name: 'Posicionamiento Orgánico SEO', link: '/servicios/seo' },
-  { name: 'Automatizaciones IA', link: '/servicios/inteligencia-artificial' },
-  { name: 'Estrategia', link: '/servicios/data-analytics' },
+  { name: 'Campañas Digitales', link: '/servicios/google-ads/' },
+  { name: 'Posicionamiento Orgánico SEO', link: '/servicios/seo/' },
+  { name: 'Automatizaciones IA', link: '/servicios/inteligencia-artificial/' },
+  { name: 'Estrategia', link: '/servicios/data-analytics/' },
 ];
 
 // Skills section for about section of the page
