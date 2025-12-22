@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /styleguide/
+Disallow: /colores/
+Disallow: /admin/
+Crawl-delay: 1
+
+Sitemap: https://pixory.cl/sitemap-index.xml

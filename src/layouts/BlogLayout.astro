@@ -11,23 +11,55 @@ import '../styles/blog.css';
 <MainLayout title={frontmatter.title} description={frontmatter.description}>
   <Navbar navLinks={navLinks} client:load />
   <main class='p-5 md:p-10 blog'>
-    <h1 class='text-[3rem] md:text-[5rem] font-bold'>{frontmatter.title}</h1>
-    <p class='mb-3 text-sm ml-2'>
-      Published on {frontmatter.pubDate} by {frontmatter.author}
-    </p>
-    {
-      frontmatter.heroImage ? (
-    <img
-      src={frontmatter.heroImage}
-      alt={frontmatter.title}
-      width="760"
-      height="400"
-      class="rounded-lg my-5"
-    />
+    <article>
+      <h1 class='text-[3rem] md:text-[5rem] font-bold'>{frontmatter.title}</h1>
+      <p class='mb-3 text-sm ml-2'>
+        Published on {frontmatter.pubDate} by {frontmatter.author}
+      </p>
+      {
+        frontmatter.heroImage ? (
+      <img
+        src={frontmatter.heroImage}
+        alt={frontmatter.title}
+        width="760"
+        height="400"
+        class="rounded-lg my-5"
+        loading="lazy"
+      />
 
-      ) : null
-    }
-    <slot />
+        ) : null
+      }
+      <slot />
+    </article>
   </main>
   <Footer navLinks={navLinks} />
 </MainLayout>
+
+<!-- BlogPosting Schema -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": frontmatter.title,
+  "description": frontmatter.description,
+  "image": frontmatter.heroImage ? `https://pixory.cl${frontmatter.heroImage}` : "https://pixory.cl/og-image.jpg",
+  "datePublished": frontmatter.pubDate,
+  "dateModified": frontmatter.updatedDate || frontmatter.pubDate,
+  "author": {
+    "@type": "Organization",
+    "name": frontmatter.author || "Pixory Marketing",
+    "url": "https://pixory.cl"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pixory Marketing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://pixory.cl/Pixorylogo3.svg"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `https://pixory.cl${Astro.url.pathname}`
+  },
+  "keywords": frontmatter.tags ? frontmatter.tags.join(', ') : ""
+})} />

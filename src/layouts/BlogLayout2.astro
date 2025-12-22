@@ -45,3 +45,32 @@ const { frontmatter, heroImage } = Astro.props;
     <Footer navLinks={navLinks} />
   </body>
 </html>
+
+<!-- BlogPosting Schema -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": frontmatter.title,
+  "description": frontmatter.description,
+  "image": heroImage ? `https://pixory.cl${heroImage}` : "https://pixory.cl/og-image.jpg",
+  "datePublished": frontmatter.pubDate,
+  "dateModified": frontmatter.updatedDate || frontmatter.pubDate,
+  "author": {
+    "@type": "Organization",
+    "name": frontmatter.author || "Pixory Marketing",
+    "url": "https://pixory.cl"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pixory Marketing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://pixory.cl/Pixorylogo3.svg"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `https://pixory.cl${Astro.url.pathname}`
+  },
+  "keywords": frontmatter.tags ? frontmatter.tags.join(', ') : ""
+})} />

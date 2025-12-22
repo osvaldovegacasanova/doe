@@ -341,3 +341,29 @@ import LogoSlider from '../../components/LogoSlider';
     }
   ]
 })} />
+
+<!-- BreadcrumbList Schema -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://pixory.cl/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Servicios",
+      "item": "https://pixory.cl/servicios/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Automatización con IA",
+      "item": "https://pixory.cl/servicios/inteligencia-artificial/"
+    }
+  ]
+})} />

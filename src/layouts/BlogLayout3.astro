@@ -21,7 +21,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
     <meta property="og:description" content={frontmatter.description} />
     <meta property="og:url" content={canonicalURL} />
     {frontmatter.heroImage && (
-      <meta property="og:image" content={`https://www.pixory.cl${frontmatter.heroImage}`} />
+      <meta property="og:image" content={`https://pixory.cl${frontmatter.heroImage}`} />
     )}
     <meta property="og:type" content="article" />
     <meta property="og:locale" content="es_CL" />
@@ -32,7 +32,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
     <meta name="twitter:title" content={frontmatter.title} />
     <meta name="twitter:description" content={frontmatter.description} />
     {frontmatter.heroImage && (
-      <meta name="twitter:image" content={`https://www.pixory.cl${frontmatter.heroImage}`} />
+      <meta name="twitter:image" content={`https://pixory.cl${frontmatter.heroImage}`} />
     )}
     <meta name="twitter:site" content="@pixorychile" />
 
@@ -103,3 +103,32 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
     <Footer navLinks={navLinks} />
   </body>
 </html>
+
+<!-- BlogPosting Schema -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": frontmatter.title,
+  "description": frontmatter.description,
+  "image": frontmatter.heroImage ? `https://pixory.cl${frontmatter.heroImage}` : "https://pixory.cl/og-image.jpg",
+  "datePublished": frontmatter.pubDate,
+  "dateModified": frontmatter.updatedDate || frontmatter.pubDate,
+  "author": {
+    "@type": "Organization",
+    "name": frontmatter.author || "Pixory Marketing",
+    "url": "https://pixory.cl"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pixory Marketing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://pixory.cl/Pixorylogo3.svg"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonicalURL
+  },
+  "keywords": frontmatter.tags ? frontmatter.tags.join(', ') : ""
+})} />
