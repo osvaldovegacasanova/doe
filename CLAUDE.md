@@ -106,6 +106,36 @@ Key settings in `astro.config.mjs`:
 - **Trailing Slash**: `'always'` - Ensures consistent URLs (e.g., `/blog/` not `/blog`)
 - **Integrations**: Tailwind, React, Sitemap (with filters for dev pages)
 
+### ⚠️ CRITICAL: Trailing Slash Requirement
+
+**The site is configured with `trailingSlash: 'always'` - ALL URLs MUST END WITH `/`**
+
+**This means:**
+- ✅ Correct: `/servicios/`, `/servicios/seo/`, `/contacto/`
+- ❌ Wrong: `/servicios`, `/servicios/seo`, `/contacto`
+
+**Where to check:**
+1. **Navigation links** in `src/data.js` (navLinks, selectedProjects)
+2. **Internal links** in all `.astro` files (`<a href="...">`)
+3. **Schema.org URLs** in JSON-LD blocks (Organization, Service, BreadcrumbList, etc.)
+4. **Canonical URLs** in page metadata
+5. **Blog post links** in markdown files
+
+**Common mistake:** Schema.org URLs in service pages often miss trailing slashes
+- Example: `"url": "https://pixory.cl/servicios/seo"` ❌
+- Correct: `"url": "https://pixory.cl/servicios/seo/"` ✅
+
+**Why this matters:**
+- URLs without trailing slashes return **404 errors**
+- Astro will show: "Your site is configured with trailingSlash set to always"
+- Breaks user navigation and SEO (broken links)
+
+**Validation command:**
+```bash
+# Find URLs without trailing slashes in schema
+grep -r '"url": "https://pixory.cl/[^"]*"' src/ | grep -v '/$"'
+```
+
 ## CRITICAL: URL Canonicalization & Redirect Configuration
 
 **⚠️ PERMANENT CHECKPOINT - READ BEFORE ANY URL/REDIRECT CHANGES ⚠️**
