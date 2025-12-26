@@ -14,6 +14,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.1] - 2025-12-26
+
+### Added
+- Nuevo artículo de blog: "Actualización de Google: Impacto en el Tráfico y Nuevas Funciones de Anuncios" (`google-core-update-impacto-trafico-2025.md`)
+- Navbar agregado a BlogLayout4 para mejorar navegación en artículos
+
+### Fixed
+- **Navegación en artículos**: Header desaparecía al abrir artículos del blog
+  - Agregado componente Navbar a `BlogLayout4.astro`
+  - Los usuarios ahora pueden navegar de vuelta al home desde cualquier artículo
+- **Link "Ver Artículos"**: Agregado trailing slash (`/blog/` en lugar de `/blog`)
+  - Arreglado en `BlogSection.astro` línea 44
+- **Nuevo artículo no aparecía en lista**: Problema de formato de fecha
+  - Cambiado `pubDate` de "Diciembre 2025" a "Dec 2025" para correcta ordenación
+  - JavaScript `Date.parse()` no reconocía nombres de meses en español
+- **Estilos rotos en nuevo artículo**: Layout incorrecto
+  - Cambiado de `BlogLayout.astro` a `BlogLayout4.astro` para consistencia
+
+### Changed
+- Versión del sitio incrementada de v2.0 a v2.1 en Footer
+- Sistema de versionado documentado en CHANGELOG.md
+
+### Technical Details
+- Archivos modificados:
+  - `src/layouts/BlogLayout4.astro` (agregado Navbar componente)
+  - `src/components/sections/BlogSection.astro` (trailing slash en link)
+  - `src/components/Footer.astro` (versión actualizada a v2.1)
+  - `src/pages/blogs/google-core-update-impacto-trafico-2025.md` (layout y formato de fecha)
+  - `CHANGELOG.md` (nueva estructura de versionado)
+
+---
+
 ## [1.1.0] - 2025-12-26
 
 ### Fixed

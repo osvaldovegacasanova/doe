@@ -1,5 +1,6 @@
 ---
 import Footer from '../components/Footer.astro';
+import Navbar from '../components/Navbar';
 import { navLinks } from '../data';
 
 const { frontmatter } = Astro.props;
@@ -75,6 +76,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
   </head>
 
   <body class="bg-white text-slate-800 font-sans">
+    <Navbar navLinks={navLinks} client:load />
     <main class="max-w-3xl mx-auto px-4 md:px-8 py-12">
       <!-- Title -->
       <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight text-center">
