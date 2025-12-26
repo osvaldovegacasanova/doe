@@ -14,6 +14,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.2] - 2025-12-26
+
+### Changed
+- **Tipografía mejorada**: Título "Creamos movimiento" ahora usa fuente Playfair Display (serif)
+  - Cambiado de Poppins (sans-serif) a Playfair Display para mayor elegancia
+  - Agregada clase `font-serif` en `AboutSection.astro` línea 15
+- Versión del sitio incrementada de v2.1 a v2.2 en Footer
+
+### Technical Details
+- Archivos modificados:
+  - `src/components/sections/AboutSection.astro` (línea 15: agregado `font-serif`)
+  - `src/components/Footer.astro` (línea 26: versión v2.2)
+
+---
+
 ## [2.1] - 2025-12-26
 
 ### Added
