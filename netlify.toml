@@ -1,0 +1,20 @@
+# Netlify Configuration for pixory.cl
+# SEO-optimized redirect configuration to eliminate redirect chains
+
+[[redirects]]
+  from = "http://www.pixory.cl/*"
+  to = "https://pixory.cl/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.pixory.cl/*"
+  to = "https://pixory.cl/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://pixory.cl/*"
+  to = "https://pixory.cl/:splat"
+  status = 301
+  force = true
