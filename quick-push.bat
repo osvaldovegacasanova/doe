@@ -15,9 +15,9 @@ if "%~1"=="" (
 )
 
 set "MSG=%~1"
-set "TMP=%TEMP%\gitmsg_%RANDOM%%RANDOM%.txt"
+set "MSGFILE=%TEMP%\gitmsg_%RANDOM%%RANDOM%.txt"
 
-> "%TMP%" (
+> "%MSGFILE%" (
   echo %MSG%
   echo.
   echo Generated por Os, Pixory
@@ -29,17 +29,17 @@ echo Committing and pushing:
 echo %MSG%
 
 git add . || goto :fail
-git commit -F "%TMP%" || goto :fail
+git commit -F "%MSGFILE%" || goto :fail
 git push || goto :fail
 
-del "%TMP%" >nul 2>&1
+del "%MSGFILE%" >nul 2>&1
 popd
 echo SUCCESS!
 exit /b 0
 
 :fail
 set "EC=%ERRORLEVEL%"
-del "%TMP%" >nul 2>&1
+del "%MSGFILE%" >nul 2>&1
 popd
 echo FAILED! (error %EC%)
 pause
