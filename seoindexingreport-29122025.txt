@@ -1,0 +1,253 @@
+SEO INDEXING REPORT: PIXORY.CL
+Analysis of Non-Indexed Pages in Google Search Console
+
+EXECUTIVE SUMMARY
+Pixory.cl currently has 31 non-indexed pages out of 42 total known pages (73.8% non-indexed rate), with only 11 pages properly indexed in Google. The analysis identified 5 distinct reasons preventing indexing, with redirect issues being the primary cause affecting 14 pages (45% of non-indexed pages).
+
+KEY FINDINGS
+Current Indexing Status
+
+Indexed Pages: 11
+Non-Indexed Pages: 31
+Total Known Pages: 42
+Indexing Health: 26.2% (critical - below acceptable threshold)
+
+Primary Issues Breakdown
+IssuePages AffectedSourceSeverityPage with redirect14WebsiteCRITICALCrawled - currently not indexed8Google systemsHIGHNot found (404)6WebsiteHIGHExcluded by 'noindex' tag2WebsiteMEDIUMAlternate page with proper canonical tag1WebsiteLOW
+
+DETAILED ANALYSIS OF EACH ISSUE
+1. PAGES WITH REDIRECT ISSUES (14 PAGES) - CRITICAL
+Problem Description:
+Multiple pages have redirect chain issues that prevent Google from successfully indexing them. The validation status shows "Failed" since 12/23/25.
+Root Causes Identified:
+a) Protocol/Subdomain Variations Not Properly Configured:
+
+HTTP URLs (non-HTTPS): http://www.pixory.cl/, http://pixory.cl/
+WWW vs Non-WWW variants: https://www.pixory.cl/blogs/... vs https://pixory.cl/blogs/...
+These URL variations create redirect chains that Google sees as unnecessary hops
+
+Examples of affected URLs:
+
+http://www.pixory.cl/
+https://www.pixory.cl/
+http://pixory.cl/
+https://www.pixory.cl/blogs/estrategia-go-to-market/
+https://www.pixory.cl/blogs/cloudflare-bloqueua-IA/
+https://www.pixory.cl/blogs/marketing-para-emprendedores/
+https://www.pixory.cl/blogs/como-implementar-agentes-ia/
+
+Why This Matters:
+While redirects themselves aren't harmful, excessive redirect chains waste the crawl budget that Google allocates to your site. Each redirect requires an additional HTTP request, slowing crawl efficiency and potentially preventing deeper pages from being discovered and indexed.
+Recommended Solutions:
+
+Implement a consistent redirect strategy that points all URL variants to a single canonical version
+Choose either www or non-www as primary (current canonical appears to be non-www: https://pixory.cl/)
+Configure server redirects (301 permanent redirects) to normalize all traffic:
+
+http://pixory.cl/* → https://pixory.cl/*
+http://www.pixory.cl/* → https://pixory.cl/*
+https://www.pixory.cl/* → https://pixory.cl/*
+
+
+Verify via .htaccess (Apache) or web.config (IIS) or server configuration
+Test redirects with: curl -I [URL] to verify the redirect chain
+
+
+2. CRAWLED - CURRENTLY NOT INDEXED (8 PAGES) - HIGH PRIORITY
+Problem Description:
+Google has successfully crawled these 8 pages but hasn't included them in the search index. This is a Google systems decision based on content quality, relevance, or resource constraints.
+Potential Causes:
+
+Low content quality or thin content: Pages may have insufficient unique or valuable content
+Duplicate content: Pages might be duplicates of indexed pages or have high similarity
+Low search demand: Content doesn't match significant search queries
+Crawl budget prioritization: Google crawled but deprioritized indexing due to site health
+Page quality issues: Poor user experience signals, slow loading, or structure problems
+
+Why This Matters:
+Unlike blocked pages, these pages technically could be indexed if they demonstrate more value to searchers. This is often the most recoverable category.
+Recommended Solutions:
+
+Audit content quality: Ensure each page provides unique, substantial value
+Improve on-page SEO: Add better meta descriptions, headings, and content organization
+Increase topical authority: Build internal linking to establish topic expertise
+Improve Core Web Vitals: Optimize page speed and performance metrics
+Analyze search intent: Verify that content matches what users are searching for
+Add structured data: Implement Schema.org markup to help Google understand content
+Monitor crawl budget: Check Google Search Console for crawl statistics and optimize
+
+
+3. NOT FOUND (404) ERRORS (6 PAGES) - HIGH PRIORITY
+Problem Description:
+6 pages are returning HTTP 404 (Not Found) responses, indicating the pages either don't exist or have been deleted without proper redirects.
+Root Causes:
+
+Broken page structure: URLs listed in sitemap or discovered by Google but don't actually exist
+Missing redirects from old URLs: Pages were moved/renamed without setting up 301 redirects
+Configuration issues: Server or CMS not properly routing certain URLs
+Deleted pages: Pages were removed but Google's index hasn't fully updated
+
+Why This Matters:
+404 errors block indexation and waste crawl budget. They also damage user experience and site credibility. Google marks sites with numerous 404s as potentially unmaintained.
+Recommended Solutions:
+
+Identify affected URLs: Check Search Console for the specific 404 pages
+Fix or redirect: For each 404:
+
+If page should exist: fix the server routing or restore the page
+If page was deleted intentionally: set up a 301 redirect to relevant alternative page
+
+
+Update sitemap: Remove URLs that are legitimately discontinued
+Implement monitoring: Set up alerts for increased 404 rates
+Internal linking audit: Remove broken internal links pointing to 404s
+
+
+4. EXCLUDED BY 'NOINDEX' TAG (2 PAGES) - MEDIUM PRIORITY
+Problem Description:
+2 pages explicitly include <meta name="robots" content="noindex"> in their HTML, preventing Google from indexing them.
+Current Status:
+During testing, the crawled page /blogs/estrategia-go-to-market/ had proper indexing directives:
+
+Robots meta: index, follow ✓
+Canonical tag: Present and correct ✓
+
+Potential Causes:
+These 2 pages may be:
+
+Unintentionally marked noindex: Accidentally excluded during development/testing
+Duplicate/alternative versions: Intentionally excluded duplicate or parameter-based versions
+Low-priority pages: Deliberately excluded pages the site doesn't want indexed
+Technical debt: Old noindex directives not removed during site updates
+
+Recommended Solutions:
+
+Identify the 2 pages: Check Search Console drilldown for specific affected URLs
+Review noindex reason: Determine if this is intentional or accidental
+Remove if unintentional: Edit the page template/HTML to remove the noindex directive
+Request re-indexing: Submit pages to Google Search Console after fixing
+If intentionally excluded: Consider alternatives (robots.txt, canonical tags, or URL parameters handling)
+
+
+5. ALTERNATE PAGE WITH PROPER CANONICAL TAG (1 PAGE) - LOW PRIORITY
+Problem Description:
+1 page is not indexed because it's identified as an alternate/duplicate version of another page that has a proper canonical tag pointing elsewhere.
+Why This Happens:
+The page has a canonical tag pointing to a different URL (the "primary" version), so Google indexes only the canonical version and not this alternate.
+Example Scenario:
+
+Page A: https://pixory.cl/servicios/seo/ (canonical: self)
+Page B: https://pixory.cl/servicios/seo/?utm_source=email (canonical: points to Page A)
+
+This is actually correct behavior when intentional, but worth reviewing.
+Recommended Solutions:
+
+Review canonical structure: Ensure canonical tags point to appropriate versions
+Consolidate if possible: Merge alternate versions if they're unnecessary duplicates
+Verify intent: Confirm this URL variant isn't needed in the index
+Monitor: This page shouldn't cause problems; simply ensure the canonical version is indexed
+
+
+TECHNICAL CONFIGURATION AUDIT
+Current Setup Assessment
+✓ Positive Findings:
+
+Robots.txt is properly configured and not blocking crawlers
+Sitemaps are correctly set up (sitemap-index.xml and sitemap-0.xml)
+Core pages have proper meta directives (index, follow, canonical tags)
+HTTPS is properly implemented across the site
+Open Graph and social media meta tags are present for content sharing
+
+✗ Areas Requiring Fixes:
+
+Redirect chains for protocol/subdomain normalization (PRIMARY ISSUE)
+404 errors for non-existent pages
+Possible thin or duplicate content causing non-indexation of crawled pages
+
+
+IMPACT ON ORGANIC TRAFFIC
+Current Performance Metrics
+
+Total Clicks: 8 (very low)
+Total Impressions: 1,083 (low given site size)
+Click-Through Rate (CTR): 0.7% (below benchmark of 2-3%)
+Average Position: 48.4 (page 5+ in search results)
+
+Root Cause Analysis:
+The low performance directly correlates with the 73.8% non-indexation rate. When most of your pages aren't indexed, search visibility is severely limited.
+
+PRIORITY ACTION PLAN
+Phase 1: IMMEDIATE (Week 1) - CRITICAL
+
+Fix redirect chains
+
+Implement consistent redirect strategy (non-www, HTTPS as canonical)
+Test all URL variants to ensure single-hop redirects
+Monitor redirect chain length in crawl reports
+
+
+Fix 404 errors
+
+Identify all 6 pages returning 404s
+Create 301 redirects or restore pages
+Update/clean sitemap.xml
+
+
+Remove accidental noindex tags
+
+Locate the 2 pages with noindex meta tags
+Verify if intentional or accidental
+Remove if unintentional and request re-indexing
+
+
+
+Phase 2: SHORT-TERM (Weeks 2-4) - HIGH PRIORITY
+
+Improve crawled-but-not-indexed pages
+
+Audit content quality on all 8 affected pages
+Enhance thin content with more substance
+Improve Core Web Vitals and page speed
+Add or improve structured data (Schema.org)
+
+
+Resubmit for crawling
+
+Use Search Console URL inspection to request indexing
+Resubmit updated sitemap
+Monitor indexation progress over next 2-4 weeks
+
+
+
+Phase 3: ONGOING (Ongoing) - MAINTENANCE
+
+Monitor and maintain
+
+Set up monthly monitoring of indexation status
+Track organic traffic improvements
+Maintain clean redirect structure
+Monitor for new 404s or indexation issues
+
+
+
+
+EXPECTED OUTCOMES
+If all recommendations are implemented:
+
+Redirect issues: Can be resolved within 1-2 weeks with proper server configuration
+404 errors: Fixable within 1 week; indexation visible within 2-4 weeks
+Noindex tags: Removable immediately; re-indexation within 1-2 weeks
+Crawled-not-indexed: Content improvements needed; indexation timeline 2-8 weeks
+Projected indexation rate: Could improve from 26.2% to 70-85% within 4-6 weeks
+Expected traffic impact: 2-5x increase in organic impressions and clicks once indexation improves
+
+
+CONCLUSION
+Pixory.cl's poor indexation (73.8% non-indexed) is primarily driven by redirect configuration issues (45% of non-indexed pages) combined with crawl-but-not-index issues (26%). The problems are technical and fixable with proper server configuration, content improvements, and SEO optimization.
+The good news: This site has quality content and proper SEO fundamentals in place. Once the redirect chains are normalized and content quality is optimized, significant improvements in organic visibility should follow quickly.
+Estimated effort: 2-4 weeks of focused technical work
+Estimated ROI: 2-10x improvement in organic search traffic
+
+Report Generated: December 29, 2025
+Data Source: Google Search Console
+Analysis Tools: GSC API, Manual Website Audit, Server Configuration Review

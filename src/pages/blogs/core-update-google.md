@@ -4,7 +4,7 @@ title: "El Core Update de Google (Junio 2025): Primeras observaciones, Ganadores
 description: El Google Core Update ya está generando impactos en el ecosistema digital.
 pubDate: Junio 2025
 heroImage: /post_img.webp
-badge: Demo badge
+badge: Google
 author: Pixory
 tags:
   - Google

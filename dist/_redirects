@@ -1,6 +1,13 @@
-# Redirect non-www to www
-https://pixory.cl/* https://www.pixory.cl/:splat 301!
+# Netlify Redirects - Canonical URL Normalization
+# Purpose: Eliminate redirect chains for SEO (all variants → https://pixory.cl/ in ONE hop)
+#
+# CRITICAL: These rules OVERRIDE Netlify's automatic domain redirects
+# Pattern: All www/http variants redirect directly to canonical https://pixory.cl/
 
-# Force HTTPS
-http://pixory.cl/* https://www.pixory.cl/:splat 301!
-http://www.pixory.cl/* https://www.pixory.cl/:splat 301!
+# Force HTTPS + non-www in single redirect (prevents chains)
+http://www.pixory.cl/*    https://pixory.cl/:splat    301!
+https://www.pixory.cl/*   https://pixory.cl/:splat    301!
+http://pixory.cl/*        https://pixory.cl/:splat    301!
+
+# Trailing slash enforcement is handled by Astro (trailingSlash: 'always')
+# No need for additional rules here

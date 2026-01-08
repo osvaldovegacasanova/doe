@@ -4,7 +4,7 @@ title: Cloudflare bloquea el rastreo de IA | Pixory
 description: "Tu empresa podría ser afectada y no lo sabes: Cloudflare por defecto bloqueará el acceso de sitios web a las IA."
 pubDate: Julio 2025
 heroImage:
-badge: Demo badge
+badge: IA
 author: Pixory
 tags:
   - Cloudflare
