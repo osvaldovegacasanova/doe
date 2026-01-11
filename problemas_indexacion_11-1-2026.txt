@@ -1,0 +1,75 @@
+No indexadas
+
+URL	Último rastreo
+https://www.pixory.cl/
+
+
+
+7 ene 2026
+http://pixory.cl/
+1 ene 2026
+http://www.pixory.cl/
+20 dic 2025
+https://pixory.cl/blogs/cloudflare-bloquea-IA
+10 nov 2025
+https://pixory.cl/blogs/estrategia-go-to-market
+10 nov 2025
+https://pixory.cl/blogs/cloudflare-bloquea-IA/
+10 nov 2025
+https://pixory.cl/blogs/marketing-para-emprendedores
+9 nov 2025
+https://www.pixory.cl/blogs/como-implementar-agentes-ia/
+7 nov 2025
+https://www.pixory.cl/blogs/estrategia-go-to-market/
+7 nov 2025
+https://www.pixory.cl/blogs/costos-inteligencia-artificial/
+7 nov 2025
+https://www.pixory.cl/blogs/odoo-inteligencia-artificial/
+7 nov 2025
+https://www.pixory.cl/blogs/core-update-google/
+28 ago 2025
+https://www.pixory.cl/blogs/cloudflare-bloquea-IA/
+28 ago 2025
+https://www.pixory.cl/blog/
+28 ago 2025
+
+
+
+Si indexadas
+
+URL	Último rastreo
+https://pixory.cl/blogs/marketing-digital-en-2026/
+8 ene 2026
+https://pixory.cl/
+7 ene 2026
+https://pixory.cl/blog/
+5 ene 2026
+https://pixory.cl/servicios/data-analytics/
+29 dic 2025
+https://pixory.cl/servicios/inteligencia-artificial/
+29 dic 2025
+https://pixory.cl/blogs/google-core-update-impacto-trafico-2025/
+
+
+
+27 dic 2025
+https://pixory.cl/blogs/core-update-google/
+26 dic 2025
+https://pixory.cl/blogs/costos-inteligencia-artificial/
+26 dic 2025
+https://pixory.cl/blogs/como-implementar-agentes-ia/
+26 dic 2025
+https://pixory.cl/blogs/marketing-para-emprendedores/
+26 dic 2025
+https://pixory.cl/blogs/estrategia-go-to-market/
+26 dic 2025
+https://pixory.cl/blogs/cloudflare-bloquea-ia/
+26 dic 2025
+https://pixory.cl/servicios/google-ads/
+19 dic 2025
+https://pixory.cl/servicios/seo/
+18 dic 2025
+https://www.pixory.cl/blogs/que-son-los-embeddings/
+7 nov 2025
+https://pixory.cl/blogs/odoo-inteligencia-artificial/
+7 nov 2025
