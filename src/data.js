@@ -120,8 +120,8 @@ export const clientLogos = [
     url: 'https://www.andesactive.cl',
   },
   {
-    name: 'Client Name 6',
-    image: '/logos/client6.svg',
+    name: 'Continental Andes Blowers',
+    image: '/logos/ContinentalBlowers.png',
     url: 'https://client6.com',
   },
 ];

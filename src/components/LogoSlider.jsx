@@ -37,13 +37,22 @@ export default function LogoSlider({ logos }) {
         className="flex gap-12 md:gap-16 lg:gap-20"
       >
         {duplicatedLogos.map((logo, index) => (
-          <div key={`${logo.name}-${index}`} className="flex-shrink-0 group">
+          <div
+            key={`${logo.name}-${index}`}
+            className="flex-shrink-0 group flex items-center justify-center
+                       w-32 h-12 md:w-40 md:h-16 lg:w-48 lg:h-20"
+          >
             {logo.url ? (
-              <a href={logo.url} target="_blank" rel="noopener noreferrer">
+              <a
+                href={logo.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-full h-full"
+              >
                 <img
                   src={logo.image}
                   alt={logo.name}
-                  className="h-12 md:h-16 lg:h-20 w-auto object-contain
+                  className="max-w-full max-h-full w-auto h-auto object-contain
                              grayscale group-hover:grayscale-0
                              opacity-60 group-hover:opacity-100
                              transition-all duration-300 ease-out"
@@ -53,7 +62,7 @@ export default function LogoSlider({ logos }) {
               <img
                 src={logo.image}
                 alt={logo.name}
-                className="h-12 md:h-16 lg:h-20 w-auto object-contain
+                className="max-w-full max-h-full w-auto h-auto object-contain
                            grayscale group-hover:grayscale-0
                            opacity-60 group-hover:opacity-100
                            transition-all duration-300 ease-out"
